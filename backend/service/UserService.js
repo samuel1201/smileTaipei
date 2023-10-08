@@ -8,7 +8,7 @@ class UserService {
 
         return this.userDao.createUser();
 
-    }
+    };
 
     getUserById(userId) {
 
