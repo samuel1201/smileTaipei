@@ -1,10 +1,9 @@
 class User {
 
-    userId;
+    userId; // 1 2 3 ..
     group;
     username;
     password;
-    email;
     nickname;
     avatarUrl;
     createdDate;

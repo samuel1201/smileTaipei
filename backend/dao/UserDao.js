@@ -2,7 +2,7 @@ const {User} = require("../model/User.js");
 
 class UserDao {
 
-    createUser() {
+    createUser(file) {
 
         return null;
 
@@ -25,6 +25,8 @@ class UserDao {
         return null;
 
     };
+
+
 
 };
 

@@ -4,6 +4,8 @@ class File {
     userId;
     fileName;
     description;
+    fileUrl;
+    fileSize;
     createdDate;
 
     constructor() {

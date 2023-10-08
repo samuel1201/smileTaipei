@@ -2,8 +2,10 @@ class RepairSheet {
 
     sheetId;
     userId;
-    visible;
+    visible; // true  false
     type;
+    category;
+    title;
     content;
     createdDate;
     lastModifiedDate;

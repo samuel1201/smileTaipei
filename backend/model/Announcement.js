@@ -4,6 +4,7 @@ class Announcement {
     userId;
     title;
     content;
+    imageUrl;
     createdDate;
     lastModifiedDate;
 

@@ -5,11 +5,11 @@ class UserController {
 
     userService = new UserService();
 
-    register(requestBody) {
+    register() {
         // demo: let user= new User(1, "2", "3", "4");
     };
 
-    login(requestBody) {
+    login() {
 
     };
 
