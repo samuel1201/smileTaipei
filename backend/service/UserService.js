@@ -4,9 +4,9 @@ class UserService {
 
     userDao = new UserDao();
 
-    createUser() {
+    createUser(user) {
 
-        return this.userDao.createUser();
+        return this.userDao.createUser(user);
 
     };
 

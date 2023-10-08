@@ -5,8 +5,10 @@ class UserController {
 
     userService = new UserService();
 
-    register() {
-        // demo: let user= new User(1, "2", "3", "4");
+    register(user) {
+
+        this.userService.createUser(user);
+
     };
 
     login() {

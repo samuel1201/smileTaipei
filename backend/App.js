@@ -1,4 +1,14 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const {Schema} = mongoose;
+const url = require('url');
+
+app.set("view engine", "ejs");
+
 const {UserController} = require("./controller/UserController.js");
+
+const {User} = require("./model/User.js");
 
 const http = require("http");
 
@@ -26,6 +36,29 @@ const server = http.createServer((req, res) => {
 
         // response json format
         res.end(JSON.stringify(responseData));
+
+    };
+
+    if (method == "GET" && pathname == "/users/register") {
+
+        let user = new User();
+        user.userId = "1";
+        user.group = "Admin";
+        user.username = "test";
+        user.password = "123";
+        user.nickname = "tttt";
+        user.avatarUrl = "123.com";
+
+        userController.register(user);
+
+        // create json
+        const responseData = {
+            message: "GET request msg.",
+            timestamp: new Date()
+        };
+
+        // response json format
+        res.end(JSON.stringify(user));
 
     };
 
