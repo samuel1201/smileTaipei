@@ -6,7 +6,7 @@ class UserDao {
 
         return null;
 
-    }
+    };
 
     getUserById(userId) {
 
@@ -25,8 +25,6 @@ class UserDao {
         return null;
 
     };
-
-
 
 };
 
