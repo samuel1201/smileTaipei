@@ -1,10 +1,17 @@
 class User {
 
-    constructor(username, password, name, gender) {
-        this.username = username;
-        this.password = password;
-        this.name = name;
-        this.gender = gender;
+    userId;
+    group;
+    username;
+    password;
+    email;
+    nickname;
+    avatarUrl;
+    createdDate;
+    lastModifiedDate;
+
+    constructor() {
+
     };
 
 };

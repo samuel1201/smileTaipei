@@ -1,0 +1,17 @@
+class RepairSheet {
+
+    sheetId;
+    userId;
+    visible;
+    type;
+    content;
+    createdDate;
+    lastModifiedDate;
+
+    constructor() {
+
+    };
+
+};
+
+module.exports.RepairSheet = RepairSheet;
