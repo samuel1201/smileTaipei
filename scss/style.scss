@@ -20,7 +20,7 @@
 
 html, body {
 	font-family: 'Roboto';
-	font-size: 75%;
+	font-size: 65%;
 }
 
 #content {
@@ -63,10 +63,16 @@ html, body {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+// 共用樣式_寬度
+
 // 共用樣式_間距
 
 .gap8 {
 	gap: 8px;
+}
+
+.gap16 {
+	gap: 16px;
 }
 
 // 共用樣式_定位
@@ -91,7 +97,30 @@ html, body {
 	align-items: center;
 	margin: 0 auto;
 	padding: 20px 24px;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	z-index: 2;
+
+	.userImage {
+		width: 32px;
+		height: 32px;
+		background: #ccc;
+		border-radius: 50%;
+	}
+}
+
+// 元件_navigation
+
+.navigation {
+	position: sticky;
+	top: 72px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 24px;
+	font-size: 1.4rem;
+	gap: 24px;
+	z-index: 1;
 
 	.userImage {
 		width: 32px;

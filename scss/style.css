@@ -1,6 +1,6 @@
 html, body {
   font-family: "Roboto";
-  font-size: 75%;
+  font-size: 65%;
 }
 
 #content {
@@ -32,6 +32,10 @@ html, body {
   gap: 8px;
 }
 
+.gap16 {
+  gap: 16px;
+}
+
 .relative {
   position: relative;
 }
@@ -48,9 +52,29 @@ html, body {
   align-items: center;
   margin: 0 auto;
   padding: 20px 24px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  z-index: 2;
 }
 .brandHeader .userImage {
+  width: 32px;
+  height: 32px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.navigation {
+  position: sticky;
+  top: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 24px;
+  font-size: 1.4rem;
+  gap: 24px;
+  z-index: 1;
+}
+.navigation .userImage {
   width: 32px;
   height: 32px;
   background: #ccc;
