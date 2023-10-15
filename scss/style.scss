@@ -32,9 +32,22 @@ html, body {
   }
 
 .container {
-		width: 1024px;
+		max-width: 1024px;
     margin: 0 auto;
     background: #fff;
+}
+
+// Media Query
+
+@mixin pad{
+  @media(max-width:768px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width:375px){
+    @content;
+  }
 }
 
 // 共用樣式_排版
@@ -43,6 +56,11 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+.grid2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 // 共用樣式_間距
@@ -87,6 +105,13 @@ html, body {
 
 .content {
 	padding: 8px 32px;
+}
+
+.homepage {
+	grid-template-columns: 1fr 300px;
+	@include pad{
+		grid-template-columns: 1fr;
+  }
 }
 
 
