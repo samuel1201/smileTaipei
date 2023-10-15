@@ -1,17 +1,101 @@
-$primary: #30c39e;
+// $primary: #30c39e;
 
-%transition {
-    transition: all .3s ease;
+// %transition {
+//     transition: all .3s ease;
+// }
+
+// .btn {
+//     padding: 6px 12px;
+//     background: $primary;
+//     @extend %transition;
+//     &:hover {
+//         background: darken($primary, 5%);
+//     }
+//     &:active {
+//         background: darken($primary, 10%);
+//     }
+// }
+
+// 共用樣式_框架
+
+html, body {
+	font-family: 'Roboto';
+	font-size: 75%;
 }
 
-.btn {
-    padding: 6px 12px;
-    background: $primary;
-    @extend %transition;
-    &:hover {
-        background: darken($primary, 5%);
-    }
-    &:active {
-        background: darken($primary, 10%);
-    }
+#content {
+	padding: 8px 0;
+}
+
+.wrapper {
+    width: 100%;
+  }
+
+.container {
+		width: 1024px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+// 共用樣式_排版
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+// 共用樣式_間距
+
+.gap8 {
+	gap: 8px;
+}
+
+// 共用樣式_定位
+
+.relative {
+	position: relative;
+}
+
+// 共用樣式_陰影
+
+.shadowOP8 {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 8%);
+}
+
+// 元件_brandHeader
+
+.brandHeader {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 24px;
+	font-size: 1.2rem;
+
+	.userImage {
+		width: 32px;
+		height: 32px;
+		background: #ccc;
+		border-radius: 50%;
+	}
+}
+
+// 元件_content
+
+.content {
+	padding: 8px 32px;
+}
+
+
+// 元件_footer
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 172px;
+  background-color: #f2f2f2;
 }
