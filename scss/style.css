@@ -1,4 +1,142 @@
-html, body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style-type: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
   font-family: "Roboto";
   font-size: 65%;
 }
@@ -81,8 +219,125 @@ html, body {
   border-radius: 50%;
 }
 
-.content {
-  padding: 8px 32px;
+.login .container {
+  border-radius: 8px;
+  background: #fff;
+  /* shadow 1 */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  margin-left: 45%;
+  width: 50%;
+  margin-top: 49px;
+  padding: 32px 24px 88px 24px;
+}
+.login .container .title {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 16px;
+}
+.login .container .title p {
+  border-left: 4px solid #ff73c1;
+  padding-left: 8px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+}
+.login .container .inputContainer {
+  padding-top: 16px;
+}
+.login .container .inputContainer img {
+  position: absolute;
+  top: 37.5%;
+  left: 5px;
+}
+.login .container .inputContainer input {
+  width: 100%;
+  border: none;
+  padding: 13px 32px 13px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+}
+.login .container button {
+  position: absolute;
+  right: 24px;
+  bottom: 32px;
+  font-size: 14px;
+  color: #fff;
+  background: #ff468f;
+  width: 104px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .login .container {
+    width: 75%;
+  }
+}
+
+.homepage {
+  grid-template-columns: 1fr 300px;
+}
+@media (max-width: 768px) {
+  .homepage {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 172px;
+  background-color: #f2f2f2;
+}
+
+.bg {
+  position: absolute;
+}
+
+.bg2 {
+  position: absolute;
+  right: 0;
+}
+
+.backstage {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  font-size: 24px;
+}
+
+.userBox {
+  display: flex;
+  font-size: 20px;
+  max-width: 370px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #fcedf4;
+  box-shadow: 0px 4px 16px 3px rgba(0, 0, 0, 0.16);
+}
+.userBox h3 {
+  padding: 3px 15px 5px 15px;
+}
+.userBox .btn {
+  border-radius: 4px;
+  margin-right: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.56);
+  font-size: 20px;
+}
+.userBox .btn-update {
+  background-color: rgba(25, 158, 78, 0.8156862745);
+}
+.userBox .btn-delete {
+  background-color: red;
+}
+.userBox .btn-lock {
+  background-color: #ff73c1;
 }
 
 .homepage {

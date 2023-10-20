@@ -1,3 +1,135 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    list-style-type: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 // $primary: #30c39e;
 
 // %transition {
@@ -18,62 +150,63 @@
 
 // 色彩引用
 
-$primary: #E51D88;
-$secondary: #FF73C1;
+$primary: #e51d88;
+$secondary: #ff73c1;
 $grey-dark: #111111;
 $grey-medium: #969696;
-$grey-light: #ADADAD;
-$border-light: #F1F1F1;
-$border-medium: #D0D0D0;
-$bg-light-grey: #F7F7F7;
-$bg-light-pink: #FCEDF4;
-$bg-dropdown: #F9F9F9;
+$grey-light: #adadad;
+$border-light: #f1f1f1;
+$border-medium: #d0d0d0;
+$bg-light-grey: #f7f7f7;
+$bg-light-pink: #fcedf4;
+$bg-dropdown: #f9f9f9;
 
 // 共用樣式_框架
 
-html, body {
-	font-family: 'Roboto';
-	font-size: 65%;
+html,
+body {
+    font-family: "Roboto";
+    font-size: 65%;
 }
 
 #content {
-	padding: 8px 0;
+    padding: 8px 0;
 }
 
 .wrapper {
     width: 100%;
-  }
+}
 
 .container {
-		max-width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
     background: #fff;
 }
 
 // Media Query
 
-@mixin pad{
-  @media(max-width:768px){
-    @content;
-  }
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
 }
-@mixin mobile{
-  @media(max-width:375px){
-    @content;
-  }
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
 }
 
 // 共用樣式_排版
 
 .flexRow {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .grid2 {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 // 共用樣式_寬度
@@ -81,88 +214,212 @@ html, body {
 // 共用樣式_間距
 
 .gap8 {
-	gap: 8px;
+    gap: 8px;
 }
 
 .gap16 {
-	gap: 16px;
+    gap: 16px;
 }
 
 // 共用樣式_定位
 
 .relative {
-	position: relative;
+    position: relative;
 }
 
 // 共用樣式_陰影
 
 .shadowOP8 {
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 8%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 8%);
 }
 
 // 元件_brandHeader
 
 .brandHeader {
-	position: sticky;
-	top: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;
-	padding: 20px 24px;
-	font-size: 1.4rem;
-	z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 24px;
+    font-size: 1.4rem;
+    z-index: 2;
 
-	.userImage {
-		width: 32px;
-		height: 32px;
-		background: #ccc;
-		border-radius: 50%;
-	}
+    .userImage {
+        width: 32px;
+        height: 32px;
+        background: #ccc;
+        border-radius: 50%;
+    }
 }
 
 // 元件_navigation
 
 .navigation {
-	position: sticky;
-	top: 72px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
-	padding: 20px 24px;
-	font-size: 1.4rem;
-	gap: 24px;
-	z-index: 1;
+    position: sticky;
+    top: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 24px;
+    font-size: 1.4rem;
+    gap: 24px;
+    z-index: 1;
 
-	.userImage {
-		width: 32px;
-		height: 32px;
-		background: #ccc;
-		border-radius: 50%;
-	}
+    .userImage {
+        width: 32px;
+        height: 32px;
+        background: #ccc;
+        border-radius: 50%;
+    }
 }
 
 // 元件_content
 
-.content {
-	padding: 8px 32px;
+//login頁面
+.login {
+    .container {
+        border-radius: 8px;
+        background: #fff;
+        /* shadow 1 */
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+        margin-left: 45%;
+        width: 50%;
+        margin-top: 49px;
+        padding: 32px 24px 88px 24px;
+        .title {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            margin-bottom: 16px;
+            p {
+                border-left: 4px solid $secondary;
+                padding-left: 8px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 20px */
+            }
+        }
+
+        .inputContainer {
+            padding-top: 16px;
+
+            img {
+                position: absolute;
+                top: 37.5%;
+                left: 5px;
+            }
+            input {
+                width: 100%;
+                border: none;
+                padding: 13px 32px 13px;
+                font-size: 14px;
+                background-color: $bg-light-grey;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 24px;
+            bottom: 32px;
+            font-size: 14px;
+            color: #fff;
+            background: #ff468f;
+            width: 104px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+        }
+    }
+    @media (max-width: 768px) {
+        .container {
+            width: 75%;
+        }
+    }
 }
 
 .homepage {
-	grid-template-columns: 1fr 300px;
-	@include pad{
-		grid-template-columns: 1fr;
-  }
+    grid-template-columns: 1fr 300px;
+    @include pad {
+        grid-template-columns: 1fr;
+    }
 }
-
 
 // 元件_footer
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 172px;
-  background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 172px;
+    background-color: #f2f2f2;
+}
+
+//後臺管理css
+
+.bg {
+    position: absolute;
+}
+.bg2 {
+    position: absolute;
+    right: 0;
+}
+
+.backstage {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    font-size: 24px;
+}
+
+.userBox {
+    display: flex;
+    font-size: 20px;
+    max-width: 370px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: $bg-light-pink;
+    box-shadow: 0px 4px 16px 3px rgba(0, 0, 0, 0.16);
+    h3 {
+        padding: 3px 15px 5px 15px;
+    }
+    //元件_後台按鈕
+    .btn {
+        border-radius: 4px;
+        margin-right: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.56);
+        font-size: 20px;
+        &-update {
+            background-color: #199e4ed0;
+        }
+        &-delete {
+            background-color: red;
+        }
+        &-lock {
+            background-color: $secondary;
+        }
+    }
+}
+
+.homepage {
+    grid-template-columns: 1fr 300px;
+    @include pad {
+        grid-template-columns: 1fr;
+    }
+}
+
+// 元件_footer
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 172px;
+    background-color: #f2f2f2;
 }
