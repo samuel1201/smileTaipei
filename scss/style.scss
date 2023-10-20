@@ -278,68 +278,6 @@ body {
 
 // 元件_content
 
-//login頁面
-.login {
-    .container {
-        border-radius: 8px;
-        background: #fff;
-        /* shadow 1 */
-        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
-        margin-left: 45%;
-        width: 50%;
-        margin-top: 49px;
-        padding: 32px 24px 88px 24px;
-        .title {
-            padding-top: 18px;
-            padding-bottom: 18px;
-            margin-bottom: 16px;
-            p {
-                border-left: 4px solid $secondary;
-                padding-left: 8px;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 100%; /* 20px */
-            }
-        }
-
-        .inputContainer {
-            padding-top: 16px;
-
-            img {
-                position: absolute;
-                top: 37.5%;
-                left: 5px;
-            }
-            input {
-                width: 100%;
-                border: none;
-                padding: 13px 32px 13px;
-                font-size: 14px;
-                background-color: $bg-light-grey;
-            }
-        }
-
-        button {
-            position: absolute;
-            right: 24px;
-            bottom: 32px;
-            font-size: 14px;
-            color: #fff;
-            background: #ff468f;
-            width: 104px;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-        }
-    }
-    @media (max-width: 768px) {
-        .container {
-            width: 75%;
-        }
-    }
-}
-
 .homepage {
     grid-template-columns: 1fr 300px;
     @include pad {
@@ -358,54 +296,55 @@ body {
 }
 
 //後臺管理css
+//後臺測試好再上
 
-.bg {
-    position: absolute;
-}
-.bg2 {
-    position: absolute;
-    right: 0;
-}
+// .bg {
+//     position: absolute;
+// }
+// .bg2 {
+//     position: absolute;
+//     right: 0;
+// }
 
-.backstage {
-    display: flex;
-    justify-content: center;
-    padding-top: 12px;
-    font-size: 24px;
-}
+// .backstage {
+//     display: flex;
+//     justify-content: center;
+//     padding-top: 12px;
+//     font-size: 24px;
+// }
 
-.userBox {
-    display: flex;
-    font-size: 20px;
-    max-width: 370px;
-    margin: 0 auto;
-    background: #fff;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: $bg-light-pink;
-    box-shadow: 0px 4px 16px 3px rgba(0, 0, 0, 0.16);
-    h3 {
-        padding: 3px 15px 5px 15px;
-    }
-    //元件_後台按鈕
-    .btn {
-        border-radius: 4px;
-        margin-right: 5px;
-        border: 1px solid rgba(0, 0, 0, 0.56);
-        font-size: 20px;
-        &-update {
-            background-color: #199e4ed0;
-        }
-        &-delete {
-            background-color: red;
-        }
-        &-lock {
-            background-color: $secondary;
-        }
-    }
-}
+// .userBox {
+//     display: flex;
+//     font-size: 20px;
+//     max-width: 370px;
+//     margin: 0 auto;
+//     background: #fff;
+//     margin-top: 20px;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 4px;
+//     background-color: $bg-light-pink;
+//     box-shadow: 0px 4px 16px 3px rgba(0, 0, 0, 0.16);
+//     h3 {
+//         padding: 3px 15px 5px 15px;
+//     }
+//     //元件_後台按鈕
+//     .btn {
+//         border-radius: 4px;
+//         margin-right: 5px;
+//         border: 1px solid rgba(0, 0, 0, 0.56);
+//         font-size: 20px;
+//         &-update {
+//             background-color: #199e4ed0;
+//         }
+//         &-delete {
+//             background-color: red;
+//         }
+//         &-lock {
+//             background-color: $secondary;
+//         }
+//     }
+// }
 
 .homepage {
     grid-template-columns: 1fr 300px;
@@ -423,3 +362,5 @@ body {
     height: 172px;
     background-color: #f2f2f2;
 }
+
+@import "./login.scss";
