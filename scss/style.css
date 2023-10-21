@@ -77,6 +77,10 @@ body {
   flex-direction: column;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .shadowOP8 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
@@ -410,12 +414,24 @@ body {
   }
 }
 
+.h3type {
+  border-left: 4px solid #ff73c1;
+  padding-left: 8px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+}
+
+.login {
+  margin-right: -42.5%;
+}
 .login .container {
   border-radius: 8px;
   background: #fff;
   /* shadow 1 */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
-  width: 30%;
+  width: 50%;
   margin-top: 49px;
   padding: 32px 24px 88px 24px;
 }
@@ -423,14 +439,6 @@ body {
   padding-top: 18px;
   padding-bottom: 18px;
   margin-bottom: 16px;
-}
-.login .container .title p {
-  border-left: 4px solid #ff73c1;
-  padding-left: 8px;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 20px */
 }
 .login .container .inputContainer {
   padding-top: 16px;
@@ -441,7 +449,7 @@ body {
   left: 5px;
 }
 .login .container .inputContainer input {
-  width: 100%;
+  width: 85%;
   border: none;
   padding: 13px 32px 13px;
   font-size: 14px;
@@ -461,6 +469,62 @@ body {
 }
 @media (max-width: 768px) {
   .login .container {
-    width: 75%;
+    margin-right: 37.5%;
+    width: 50%;
   }
+}
+
+.userPage {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.userPage .section1-box1 {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+.userPage .section1 .avatar {
+  height: 104px;
+  width: 104px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.userPage .section1 .imgIcon {
+  position: absolute;
+  left: 30px;
+  bottom: 23px;
+}
+.userPage .section1 .updateImg {
+  font-size: 14px;
+  background-color: white;
+  color: #e51d88;
+  padding: 10px 10px 10px 30px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  border: 1px solid #d0d0d0;
+  margin-left: 24px;
+}
+.userPage .section1-box2 {
+  width: 100%;
+  padding-bottom: 60px;
+  padding-top: 24px;
+  margin-left: 24px;
+  font-size: 16px;
+}
+.userPage .section1-box2 p {
+  font-weight: 700;
+}
+.userPage .section1-box2 input {
+  width: 100%;
+  padding: 14px 8px 14px 0px;
+  border-radius: 4px;
+  border: 1px solid #f1f1f1;
+  background: #f7f7f7;
+}
+.userPage .section1-box2 button {
+  color: white;
+  margin-left: 45%;
+  border-radius: 50px;
+  border: none;
+  background: #e51d88;
+  padding: 10px 32px 10px 32px;
 }/*# sourceMappingURL=style.css.map */
