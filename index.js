@@ -29,7 +29,8 @@ fetch("/page/home.html")
 // 路由將特定的路徑對應到不同的內容頁面
 const routes = {
     "/": "/page/login.html",
-    "/page/announcements.html": "announcements.html", // 連結路徑匹配
+    "/page/announcements.html": "announcements.html",
+    "/page/userPage.html": "/page/userPage.html", // 連結路徑匹配
 };
 
 // 路由觸發事件
