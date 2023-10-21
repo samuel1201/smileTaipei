@@ -37,7 +37,8 @@ const server = http.createServer((req, res) => {
         // response json format
         res.end(JSON.stringify(responseData));
 
-    };
+    }
+    ;
 
     if (method == "GET" && pathname == "/users/register") {
 
@@ -60,7 +61,8 @@ const server = http.createServer((req, res) => {
         // response json format
         res.end(JSON.stringify(user));
 
-    };
+    }
+    ;
 
 });
 

@@ -1,5 +1,5 @@
-const { UserService } = require("../service/UserService.js");
-const { User } = require("../model/User.js");
+const {UserService} = require("../service/UserService.js");
+const {User} = require("../model/User.js");
 
 class UserController {
 
