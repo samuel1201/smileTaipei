@@ -6,6 +6,7 @@ class Post {
     content;
     createdDate;
     lastModifiedDate;
+    
 
     constructor() {
 
