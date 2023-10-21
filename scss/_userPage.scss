@@ -1,0 +1,57 @@
+.userPage {
+    margin-left: 32px;
+    margin-right: 32px;
+    .section1 {
+        &-box1 {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .avatar {
+            height: 104px;
+            width: 104px;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+        .imgIcon {
+            position: absolute;
+            left: 30px;
+            bottom: 23px;
+        }
+        .updateImg {
+            //編輯圖片按鈕
+            font-size: 14px;
+            background-color: white;
+            color: $primary;
+            padding: 10px 10px 10px 30px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border-radius: 50px;
+            border: 1px solid $border-medium;
+            margin-left: 24px;
+        }
+        &-box2 {
+            width: 100%;
+            padding-bottom: 60px;
+            padding-top: 24px;
+            margin-left: 24px;
+            font-size: 16px;
+            p {
+                font-weight: 700;
+            }
+            input {
+                width: 100%;
+                padding: 14px 8px 14px 0px;
+                border-radius: 4px;
+                border: 1px solid $border-light;
+                background: $bg-light-grey;
+            }
+            button {
+                color: white;
+                margin-left: 45%;
+                border-radius: 50px;
+                border: none;
+                background: $primary;
+                padding: 10px 32px 10px 32px;
+            }
+        }
+    }
+}

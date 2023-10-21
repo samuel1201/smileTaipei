@@ -13,14 +13,6 @@
             padding-top: 18px;
             padding-bottom: 18px;
             margin-bottom: 16px;
-            p {
-                border-left: 4px solid $secondary;
-                padding-left: 8px;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 100%; /* 20px */
-            }
         }
 
         .inputContainer {
@@ -32,7 +24,7 @@
                 left: 5px;
             }
             input {
-                width: 100%;
+                width: 85%;
                 border: none;
                 padding: 13px 32px 13px;
                 font-size: 14px;
@@ -55,7 +47,7 @@
     }
     @media (max-width: 768px) {
         .container {
-            margin-right: 42%;
+            margin-right: 37.5%;
             width: 50%;
         }
     }
