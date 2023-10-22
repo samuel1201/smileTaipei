@@ -1,0 +1,57 @@
+.Organization {
+    margin: 0px 32px;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            display: flex;
+            font-size: 20px;
+            border-left: 4px solid $secondary;
+            padding-left: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            align-items: end;
+            padding-top: 10px;
+        }
+        .selection {
+            img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+        }
+        select {
+            width: 184px;
+            height: 40px;
+            font-size: 16px;
+            padding-left: 36px;
+            border: none;
+            background-color: $bg-light-grey;
+            option {
+                padding: 10px 0px 9px 0px;
+            }
+        }
+    }
+    .boxes {
+        padding-top: 25px;
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        text-align: center;
+        div {
+            border-bottom: 1px solid $grey-light;
+            margin-bottom: 32px;
+            h3 {
+                margin-top: 8px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            h4 {
+                color: $grey-light;
+                font-size: 12px;
+            }
+        }
+    }
+}

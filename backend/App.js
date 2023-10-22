@@ -1,48 +1,12 @@
-// import package
 const express = require("express");
-
-// import object
-const {UserController} = require("./controller/UserController.js");
+const path = require("path");
 
 const app = express();
-const userController = new UserController();
 
-// middlewares
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use("/static", express.static(path.resolve("../frontend", "static")));
 
-// http request, GET, POST, PUT, DELETE
-app.post("/users/register", (req, res) => {
-
-    let user = userController.register(req.body);
-
-    res.json(user);
-
+app.get("/*", (req, res) => {
+    res.sendFile(path.resolve("../frontend", "index.html"));
 });
 
-app.post("/users/login", (req, res) => {
-
-    let user = userController.login(req.body);
-
-    res.json(user);
-
-});
-
-// query user info
-app.get("/users/:userId", (req, res) => {
-
-    console.log(req.params.userId);
-
-});
-
-app.get("*", (req, res) => {
-
-    res.send("頁面不存在！");
-
-});
-
-// port, callback
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`server runs on http://localhost:${PORT}`);
-});
+app.listen(process.env.PORT || 5050, () => console.log("server running"));
