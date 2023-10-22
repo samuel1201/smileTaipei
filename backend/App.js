@@ -12,18 +12,17 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // http request, GET, POST, PUT, DELETE
-app.post("/users/login", (req, res) => {
+app.post("/users/register", (req, res) => {
 
-    let user = userController.login(req.body);
+    let user = userController.register(req.body);
 
     res.json(user);
 
 });
 
-// http request, GET, POST, PUT, DELETE
-app.post("/users/register", (req, res) => {
+app.post("/users/login", (req, res) => {
 
-    let user = userController.register(req.body);
+    let user = userController.login(req.body);
 
     res.json(user);
 

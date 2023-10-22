@@ -6,19 +6,15 @@ class UserService {
 
     createUser(userRegisterRequest) {
 
-        // let username = this.getUserByUsername(userRegisterRequest.username);
-        //
-        // if (username != null) {
-        //     // username 重複
-        // }
-
         return this.userDao.createUser(userRegisterRequest);
 
     };
 
-    getUserByUsername(username) {
+    login(userLoginRequest) {
 
-        return this.userDao.getUserById();
+        let userName = userLoginRequest.username;
+
+        return this.userDao.getUserByUsername(userName);
 
     };
 

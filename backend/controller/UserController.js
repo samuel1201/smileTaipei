@@ -1,5 +1,6 @@
 const {UserService} = require("../service/UserService.js");
 const {UserRegisterRequest} = require("../dto/UserRegisterRequest.js");
+const {UserLoginRequest} = require("../dto/UserLoginRequest.js");
 
 class UserController {
 
@@ -19,6 +20,13 @@ class UserController {
     };
 
     login(user) {
+
+        let userLoginRequest = new UserLoginRequest();
+
+        userLoginRequest.username = user.username;
+        userLoginRequest.password = user.password;
+
+        return this.userService.login(userLoginRequest);
 
     };
 

@@ -47,17 +47,36 @@ class UserDao {
 
         // create data
         newObject.save().then((saveObject) => {
-            console.log("save success!");
-            console.log(saveObject);
+            user = saveObject;
         });
 
         return user;
 
     };
 
-    getUserByUsername(username) {
+    getUserByUsername(userName) {
 
-        return null;
+        let user = new User();
+
+        const userSchema = new Schema({
+            group: String,
+            username: String,
+            password: String,
+            nickname: String,
+            avatarUrl: String,
+            createdDate: Date,
+            lastModifiedDate: Date
+        });
+
+        const userModel = mongoose.model(collectionName, userSchema);
+
+        userModel.find({username: userName})
+            .exec()
+            .then((data) => {
+                user.username = data.username;
+            });
+
+        return user;
 
     };
 
