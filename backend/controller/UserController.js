@@ -1,4 +1,5 @@
 const {UserService} = require("../service/UserService.js");
+const {UserRegisterRequest} = require("../dto/UserRegisterRequest.js");
 
 class UserController {
 
@@ -6,16 +7,18 @@ class UserController {
 
     register(user) {
 
-        console.log(user);
-        console.log(user.name);
+        let userRegisterRequest = new UserRegisterRequest();
 
-        //this.userService.createUser(user);
+        userRegisterRequest.username = user.username;
+        userRegisterRequest.password = user.password;
+        userRegisterRequest.nickname = user.nickname;
+        userRegisterRequest.avatarUrl = user.avatarUrl;
 
-        return null;
+        return this.userService.createUser(userRegisterRequest);
 
     };
 
-    login() {
+    login(user) {
 
     };
 

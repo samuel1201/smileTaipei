@@ -4,27 +4,21 @@ class UserService {
 
     userDao = new UserDao();
 
-    createUser(user) {
+    createUser(userRegisterRequest) {
 
-        return this.userDao.createUser(user);
+        // let username = this.getUserByUsername(userRegisterRequest.username);
+        //
+        // if (username != null) {
+        //     // username 重複
+        // }
+
+        return this.userDao.createUser(userRegisterRequest);
 
     };
 
-    getUserById(userId) {
+    getUserByUsername(username) {
 
         return this.userDao.getUserById();
-
-    };
-
-    getUsers(user) {
-
-        return this.userDao.getUsers();
-
-    };
-
-    updateUser() {
-
-        return this.userDao.updateUser();
 
     };
 

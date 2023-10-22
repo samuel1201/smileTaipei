@@ -1,7 +1,9 @@
-class User {
+class UserRegisterRequest {
 
     username;
     password;
+    nickname;
+    avatarUrl;
 
     constructor() {
 
@@ -9,4 +11,4 @@ class User {
 
 };
 
-module.exports.User = User;
+module.exports.UserRegisterRequest = UserRegisterRequest;

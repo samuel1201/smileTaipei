@@ -1,4 +1,4 @@
-class User {
+class UserLoginRequest {
 
     username;
     password;
@@ -9,4 +9,4 @@ class User {
 
 };
 
-module.exports.User = User;
+module.exports.UserLoginRequest = UserLoginRequest;

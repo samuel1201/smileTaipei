@@ -1,6 +1,5 @@
 class User {
 
-    userId; // 1 2 3 ..
     group;
     username;
     password;
