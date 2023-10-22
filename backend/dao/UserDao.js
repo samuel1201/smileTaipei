@@ -73,7 +73,7 @@ class UserDao {
         userModel.find({username: userName})
             .exec()
             .then((data) => {
-                user.username = data.username;
+                // ??? 取得的 data 無法轉換成 User object
             });
 
         return user;
