@@ -1,70 +1,50 @@
-// import
+// import package
 const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const url = require("url");
-const http = require("http");
 
-// create object
-const {Schema} = mongoose;
+// import object
 const {UserController} = require("./controller/UserController.js");
-const {User} = require("./model/User.js");
 
-app.set("view engine", "ejs");
 
-// create http server
-const server = http.createServer((req, res) => {
+const app = express();
+const userController = new UserController();
 
-    const {pathname, query} = url.parse(req.url);
-    const method = req.method;
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-    // set response format to json
-    res.setHeader("Content-Type", "application/json");
+// http request, GET, POST, PUT, DELETE
+app.post("/users/login", (req, res) => {
 
-    const userController = new UserController();
+    let user = userController.login(req.body);
 
-    // http request, GET, POST, PUT, DELETE
-    if (method == "POST" && pathname == "/users/login") {
-
-        // create response json
-        const responseData = {
-            message: "GET request msg.",
-            timestamp: new Date()
-        };
-
-        // response json format
-        res.end(JSON.stringify(responseData));
-
-    }
-    ;
-
-    if (method == "POST" && pathname == "/users/register") {
-
-        let user = new User();
-        user.userId = "2";
-        user.group = "Admin";
-        user.username = "test";
-        user.password = "123";
-        user.nickname = "tttt";
-        user.avatarUrl = "123.com";
-
-        userController.register(user);
-
-        // create json
-        const responseData = {
-            message: "GET request msg.",
-            timestamp: new Date()
-        };
-
-        // response json format
-        res.end(JSON.stringify(user));
-
-    }
-    ;
+    res.json(user);
 
 });
 
+// http request, GET, POST, PUT, DELETE
+app.post("/users/register", (req, res) => {
+
+    let user = userController.register(req.body);
+
+    res.json(user);
+
+});
+
+// query user info
+app.get("/users/:userId", (req, res) => {
+
+    console.log(req.params.userId);
+
+});
+
+app.get("*", (req, res) => {
+
+    res.send("頁面不存在！");
+
+});
+
+// port, callback
 const PORT = 3000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`server runs on http://localhost:${PORT}`);
 });
