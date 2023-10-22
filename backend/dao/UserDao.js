@@ -75,7 +75,7 @@ class UserDao {
             .then((data) => {
                 console.log(data[0]);
                 // ??? 取得的 data 無法轉換成 User object
-                user = data[0];
+                user = data.toObject();
             });
 
         return user;
