@@ -4,7 +4,6 @@ const express = require("express");
 // import object
 const {UserController} = require("./controller/UserController.js");
 
-
 const app = express();
 const userController = new UserController();
 
