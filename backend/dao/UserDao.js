@@ -6,7 +6,7 @@ const {User} = require("../model/User.js");
 
 // connection database
 // local: mongoose.connect("mongodb://localhost:27017/{database}");
-mongoose.connect("mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongodb_nodejs_commuityinfoplatform?retryWrites=true&w=majority")
     .then(() => {
         console.log("connection success!");
     })
