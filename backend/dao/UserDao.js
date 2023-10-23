@@ -35,7 +35,7 @@ class UserDao {
 
         const userModel = mongoose.model(collectionName, userSchema);
 
-        user.group = "VIP";
+        user.group = "General";
         user.username = userRegisterRequest.username;
         user.password = userRegisterRequest.password;
         user.nickname = userRegisterRequest.nickname;
@@ -71,15 +71,11 @@ class UserDao {
         const userModel = mongoose.model(collectionName, userSchema);
 
         userModel.find({username: userName})
-            .exec()
             .then((data) => {
-                console.log(data[0]);
-                // ??? 取得的 data 無法轉換成 User object
-                user = data.toObject();
-                console.log(user);
+                return data[0];
             });
 
-        return user;
+        return userModel;
 
     };
 
