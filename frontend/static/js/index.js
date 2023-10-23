@@ -1,5 +1,6 @@
 import homeView from "./views/homeView.js";
 import OrganizationView from "./views/OrganizationView.js";
+import loginView from "./views/loginView.js";
 const navigateTo = (url) => {
     history.pushState(null, null, url);
     router();
@@ -8,8 +9,8 @@ const navigateTo = (url) => {
 const router = async () => {
     const routes = [
         {
-            path: "/",
-            view: () => console.log("view /LOGIN"),
+            path: "/login",
+            view: loginView,
         },
         {
             path: "/home",

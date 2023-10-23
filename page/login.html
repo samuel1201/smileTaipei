@@ -7,35 +7,79 @@
         <!-- 引入index.js -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-        <link href="../frontend//static/scss/style.css" rel="stylesheet" />
+        <link href="../frontend/static/scss/style.css" rel="stylesheet" />
     </head>
 
     <body>
-        <div id="header"></div>
-        <div id="navigation"></div>
-        <div class="login">
-            <div class="container relative">
-                <div class="title shadowOP8">
-                    <h3 class="h3type">用戶登入</h3>
+        <div class="wrapper">
+            <div class="container">
+                <div class="brandHeader shadowHeader">
+                    <div>
+                        <a href="../index.html"><img src="../frontend/static/icon/logo.svg" /></a>
+                    </div>
+                    <div class="flexRow gap8">
+                        <div class="userImage"></div>
+                        <div class="userName hidden">Hello! User Name</div>
+                        <div class="menu">
+                            <div class="iconWrapper flexCenter">
+                                <img src="../frontend/static/icon/menu.svg" />
+                            </div>
+
+                            <!-- <div class="dropdownWrapper shadowOP16 show">
+        
+                                    <div class="dropdownItem flexRow">
+                                        <img src="../frontend/static/icon/add.svg" />
+                                        <span>新增公告</span>
+                                    </div>
+        
+                                    <div class="dropdownItem flexRow">
+                                        <img src="../icon/edit.svg" />
+                                        <span>編輯</span>
+                                    </div>
+        
+                                    <div class="dropdownItem flexRow">
+                                        <img src="../icon/delete.svg" />
+                                        <span>刪除</span>
+                                    </div>
+        
+                                </div> -->
+                        </div>
+                    </div>
                 </div>
-                <div class="inputContainer relative">
-                    <img src="../icon/user.svg" class="user" />
-                    <input type="email" name="email" id="email" placeholder="請輸入帳號" /><br />
-                    <p></p>
+                <div class="navigation hidden">
+                    <a href="/home" class="active" data-link>微笑台北 </a>
+                    <a href="/announcements" data-link>住戶公告</a>
+                    <a href="/communicate" data-link>住戶交流</a>
+                    <a href="/repair" data-link>公共報修</a>
+                    <a href="/group" data-link>組織架構</a>
+                    <a href="/userPage" data-link>用戶中心</a>
+                    <a href="/vote" data-link>投票表決</a>
+                    <a href="/backStage" data-link>後台登入</a>
                 </div>
-                <br />
-                <div class="inputContainer relative">
-                    <img src="../icon/password.svg" class="pwd" />
-                    <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" /><br />
-                    <p></p>
+                <div id="content">
+                    <div class="login relative">
+                        <h3 class="h3type">用戶登入</h3>
+                        <div class="relative">
+                            <img src="../frontend/static/icon/user.svg" alt="帳號icon" class="icon" />
+                            <input type="text" placeholder="請輸入使用者名稱" /><br />
+                            <p class="accountAlert">查無此帳號，請洽詢管理員。</p>
+                        </div>
+                        <div class="relative">
+                            <img src="../frontend/static/icon/password.svg" alt="帳號icon" class="icon" />
+                            <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" />
+                            <p class="pwdAlert">密碼輸入錯誤，請洽詢管理員</p>
+                        </div>
+                        <button type="submit">登入</button>
+                    </div>
                 </div>
-                <br />
-                <button type="button">登入</button>
+                <div class="footer flexCenter flexColumn gap16">
+                    <img src="../frontend/static/icon/footerLogo.svg" />
+                    <div class="footerTextWrapper flexRow">
+                        <span>02-1234567890&nbsp;&nbsp;&nbsp;&nbsp;smileTaipei@smileTaipei.com</span>
+                        <span>臺北市信義區基隆路1段155號13樓之5</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div id="footer"></div>
-        <script src="../index.js"></script>
-        <!-- 引入 index.js -->
     </body>
 </html>
