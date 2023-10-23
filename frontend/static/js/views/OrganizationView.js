@@ -7,7 +7,7 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-                    <div class="Organization">
+                    <div class="Organization padLR-32px">
                         <div class="top">
                             <h2>現任社區管理委員會列表</h2>
                             <div class="selection relative">

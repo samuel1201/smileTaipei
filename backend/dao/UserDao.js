@@ -1,12 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
-const {User} = require("../model/User.js");
+const { User } = require("../model/User.js");
 
 // connection database
 // local: mongoose.connect("mongodb://localhost:27017/{database}");
-mongoose.connect("mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongodb_nodejs_commuityinfoplatform?retryWrites=true&w=majority")
+mongoose
+    .connect(
+        "mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongodb_nodejs_commuityinfoplatform?retryWrites=true&w=majority"
+    )
     .then(() => {
         console.log("connection success!");
     })
@@ -18,9 +21,7 @@ mongoose.connect("mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongo
 let collectionName = "Users"; // mongodb collections
 
 class UserDao {
-
     createUser(userRegisterRequest) {
-
         let user = new User();
 
         const userSchema = new Schema({
@@ -30,7 +31,7 @@ class UserDao {
             nickname: String,
             avatarUrl: String,
             createdDate: Date,
-            lastModifiedDate: Date
+            lastModifiedDate: Date,
         });
 
         const userModel = mongoose.model(collectionName, userSchema);
@@ -51,11 +52,9 @@ class UserDao {
         });
 
         return user;
-
-    };
+    }
 
     getUserByUsername(userName) {
-
         let user = new User();
 
         const userSchema = new Schema({
@@ -65,20 +64,17 @@ class UserDao {
             nickname: String,
             avatarUrl: String,
             createdDate: Date,
-            lastModifiedDate: Date
+            lastModifiedDate: Date,
         });
 
         const userModel = mongoose.model(collectionName, userSchema);
 
-        userModel.find({username: userName})
-            .then((data) => {
-                return data[0];
-            });
+        userModel.find({ username: userName }).then((data) => {
+            return data[0];
+        });
 
         return userModel;
-
-    };
-
-};
+    }
+}
 
 module.exports.UserDao = UserDao;

@@ -1,6 +1,7 @@
 import homeView from "./views/homeView.js";
 import OrganizationView from "./views/OrganizationView.js";
 import loginView from "./views/loginView.js";
+import backstageView from "./views/backstageView.js";
 const navigateTo = (url) => {
     history.pushState(null, null, url);
     router();
@@ -40,10 +41,10 @@ const router = async () => {
         //     path: "/vote",
         //     view: () => console.log("view /vote"),
         // },
-        // {
-        //     path: "/backStage",
-        //     view: () => console.log("view /backStage"),
-        // },
+        {
+            path: "/backStage",
+            view: backstageView,
+        },
     ];
 
     //TEST EACH Route for potential match

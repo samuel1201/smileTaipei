@@ -54,7 +54,15 @@ body {
     gap: 8px;
 }
 
+.padLR-32px {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 //------ layout ------//
+.flex {
+    display: flex;
+}
 
 .flexRow {
     display: flex;
@@ -125,6 +133,12 @@ body {
     flex-direction: column;
 }
 
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 //------ shadow ------//
 .absolute {
     position: absolute;
@@ -138,6 +152,13 @@ body {
 
 .shadowOP16 {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 16%);
+}
+
+//共用 邊框
+
+//下邊框
+.bottom_border {
+    border-bottom: 1px solid $border-light;
 }
 
 //------ brand header ------//
@@ -652,57 +673,7 @@ body {
     line-height: 100%; /* 20px */
 }
 
-//後臺管理css
-//後臺測試好再上
-
-// .bg {
-//     position: absolute;
-// }
-// .bg2 {
-//     position: absolute;
-//     right: 0;
-// }
-
-// .backstage {
-//     display: flex;
-//     justify-content: center;
-//     padding-top: 12px;
-//     font-size: 24px;
-// }
-
-// .userBox {
-//     display: flex;
-//     font-size: 20px;
-//     max-width: 370px;
-//     margin: 0 auto;
-//     background: #fff;
-//     margin-top: 20px;
-//     align-items: center;
-//     justify-content: center;
-//     border-radius: 4px;
-//     background-color: $bg-light-pink;
-//     box-shadow: 0px 4px 16px 3px rgba(0, 0, 0, 0.16);
-//     h3 {
-//         padding: 3px 15px 5px 15px;
-//     }
-//     //元件_後台按鈕
-//     .btn {
-//         border-radius: 4px;
-//         margin-right: 5px;
-//         border: 1px solid rgba(0, 0, 0, 0.56);
-//         font-size: 20px;
-//         &-update {
-//             background-color: #199e4ed0;
-//         }
-//         &-delete {
-//             background-color: red;
-//         }
-//         &-lock {
-//             background-color: $secondary;
-//         }
-//     }
-// }
-
 @import "./login.scss";
 @import "./userPage.scss";
 @import "./Organization.scss";
+@import "./backstage.scss";
