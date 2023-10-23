@@ -604,9 +604,6 @@ body {
   padding: 10px 32px 10px 32px;
 }
 
-.Organization {
-  margin: 0px 32px;
-}
 .Organization .top {
   display: flex;
   justify-content: space-between;
@@ -619,7 +616,9 @@ body {
   margin-bottom: 20px;
   font-weight: 700;
   align-items: end;
-  padding-top: 10px;
+}
+.Organization .top .selection {
+  margin-top: 20px;
 }
 .Organization .top .selection img {
   position: absolute;
@@ -641,7 +640,7 @@ body {
   padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 120px;
   text-align: center;
 }
 .Organization .boxes div {
@@ -657,4 +656,21 @@ body {
 .Organization .boxes div h4 {
   color: #adadad;
   font-size: 12px;
+}
+@media (420px <= width <= 768px) {
+  .Organization .top {
+    display: block;
+  }
+  .Organization .boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+  }
+}
+@media (width < 420px) {
+  .Organization .top {
+    display: block;
+  }
+  .Organization .boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */

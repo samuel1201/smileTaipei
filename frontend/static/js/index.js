@@ -1,4 +1,4 @@
-import announcementsView from "./views/homeView.js";
+import homeView from "./views/homeView.js";
 import OrganizationView from "./views/OrganizationView.js";
 const navigateTo = (url) => {
     history.pushState(null, null, url);
@@ -13,7 +13,7 @@ const router = async () => {
         },
         {
             path: "/home",
-            view: announcementsView,
+            view: homeView,
         },
         {
             path: "/announcements",

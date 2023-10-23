@@ -1,5 +1,4 @@
 .Organization {
-    margin: 0px 32px;
     .top {
         display: flex;
         justify-content: space-between;
@@ -11,9 +10,9 @@
             margin-bottom: 20px;
             font-weight: 700;
             align-items: end;
-            padding-top: 10px;
         }
         .selection {
+            margin-top: 20px;
             img {
                 position: absolute;
                 top: 10px;
@@ -37,7 +36,7 @@
         display: grid;
 
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 20px;
+        grid-column-gap: 120px;
         text-align: center;
         div {
             border-bottom: 1px solid $grey-light;
@@ -52,6 +51,23 @@
                 color: $grey-light;
                 font-size: 12px;
             }
+        }
+    }
+    @media (420px<= width <= 768px) {
+        .top {
+            display: block;
+        }
+        .boxes {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 60px;
+        }
+    }
+    @media (width < 420px) {
+        .top {
+            display: block;
+        }
+        .boxes {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
