@@ -56,7 +56,37 @@
                     <a href="/vote" data-link>投票表決</a>
                     <a href="/backStage" data-link>後台登入</a>
                 </div>
-                <div id="content"></div>
+                <div id="content">
+                    <div class="userPage padLR-32px">
+                        <!--上層 頭像 及更新密碼區域-->
+                        <div class="section1">
+                            <h3 class="h3type">用戶中心</h3>
+                            <div class="section1_main">
+                                <div class="avatar R_border">
+                                    <img src="../frontend/static/icon/Ellipse3.png" alt="" /><br />
+                                    <!--編輯圖片按鈕-->
+                                    <label class="prettier-input relative">
+                                        <input type="file" name="img-change" id="img-change" />
+                                        <img src="../frontend/static/icon/image.svg" alt="" />
+                                        <div>編輯圖片</div>
+                                    </label>
+                                </div>
+                                <!--更改密碼區域-->
+                                <div class="pwd_change">
+                                    <label for="pwd_change">更新密碼:</label><br />
+                                    <input type="password" name="pwd_change" id="pwd_change" /><br />
+                                    <div class="btn">
+                                        <button type="submit" class="chang_pwd">更新</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--中層 區域2 報修列表-->
+                        <div class="section2"></div>
+                        <!--下層 區域3 貼文列表-->
+                        <div class="section3"></div>
+                    </div>
+                </div>
                 <div class="footer flexCenter flexColumn gap16">
                     <img src="../frontend/static/icon/footerLogo.svg" />
                     <div class="footerTextWrapper flexRow">

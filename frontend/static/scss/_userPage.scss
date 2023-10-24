@@ -1,2 +1,77 @@
 .userPage {
+    .section1_main {
+        display: flex;
+    }
+    .avatar {
+        padding: 16px 24px 16px 24px;
+        img {
+            width: 104px;
+            height: 104px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .prettier-input {
+        input {
+            display: none;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px 10px 20px;
+            font-size: 12px;
+            color: $primary;
+            cursor: pointer;
+            border-radius: 50px;
+            border: 1px solid $border-medium;
+            &:hover {
+                background-color: #f3cee9;
+            }
+        }
+        img {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 10px;
+            left: 15px;
+        }
+    }
+
+    .pwd_change {
+        display: inline-block;
+        margin-left: 24px;
+        margin-right: 32px;
+        width: 100%;
+
+        label {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        input {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid $border-light;
+            background: $bg-light-grey;
+            padding: 14px 8px 14px 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            button {
+                border-radius: 50px;
+                background: $primary;
+                border: none;
+                padding: 10px 32px 10px 32px;
+                color: #fff;
+                justify-content: center;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
 }

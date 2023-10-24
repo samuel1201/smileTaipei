@@ -110,6 +110,10 @@ body {
   border-bottom: 1px solid #f1f1f1;
 }
 
+.R_border {
+  border-right: 1px solid #f1f1f1;
+}
+
 #header {
   position: sticky;
   top: 0;
@@ -576,6 +580,77 @@ body {
     right: 18px;
   }
 }
+.userPage .section1_main {
+  display: flex;
+}
+.userPage .avatar {
+  padding: 16px 24px 16px 24px;
+}
+.userPage .avatar img {
+  width: 104px;
+  height: 104px;
+  margin-bottom: 8px;
+}
+.userPage .prettier-input input {
+  display: none;
+}
+.userPage .prettier-input div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 10px 20px;
+  font-size: 12px;
+  color: #e51d88;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #d0d0d0;
+}
+.userPage .prettier-input div:hover {
+  background-color: #f3cee9;
+}
+.userPage .prettier-input img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 15px;
+}
+.userPage .pwd_change {
+  display: inline-block;
+  margin-left: 24px;
+  margin-right: 32px;
+  width: 100%;
+}
+.userPage .pwd_change label {
+  font-size: 14px;
+  font-weight: 700;
+}
+.userPage .pwd_change input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #f1f1f1;
+  background: #f7f7f7;
+  padding: 14px 8px 14px 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.userPage .pwd_change .btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.userPage .pwd_change .btn button {
+  border-radius: 50px;
+  background: #e51d88;
+  border: none;
+  padding: 10px 32px 10px 32px;
+  color: #fff;
+  justify-content: center;
+}
+.userPage .pwd_change .btn button:hover {
+  transform: scale(1.1);
+}
+
 .Organization .top {
   display: flex;
   justify-content: space-between;
