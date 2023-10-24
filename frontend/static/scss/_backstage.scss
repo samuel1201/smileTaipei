@@ -79,3 +79,35 @@
         }
     }
 }
+
+@media (width >= 489px) {
+    .building_button {
+        visibility: visible;
+    }
+    .building_select {
+        visibility: hidden;
+    }
+}
+
+@media (width <=489px) {
+    .building_button {
+        display: none;
+    }
+    .building_select {
+        visibility: visible;
+        padding: 13px 32px 13px 32px;
+        font-size: 14px;
+        color: $grey-dark;
+        background-color: $bg-light-pink;
+        border: none;
+    }
+
+    .backstage {
+        .permissionControl {
+            th,
+            td {
+                padding: 13px 20px 13px 10px;
+            }
+        }
+    }
+}

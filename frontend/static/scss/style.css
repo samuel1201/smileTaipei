@@ -722,4 +722,30 @@ body {
 }
 .backstage .permissionControl .switch:checked::before {
   left: 50px;
+}
+
+@media (width >= 489px) {
+  .building_button {
+    visibility: visible;
+  }
+  .building_select {
+    visibility: hidden;
+  }
+}
+@media (width <= 489px) {
+  .building_button {
+    display: none;
+  }
+  .building_select {
+    visibility: visible;
+    padding: 13px 32px 13px 32px;
+    font-size: 14px;
+    color: #111111;
+    background-color: #fcedf4;
+    border: none;
+  }
+  .backstage .permissionControl th,
+  .backstage .permissionControl td {
+    padding: 13px 20px 13px 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
