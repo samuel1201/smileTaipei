@@ -676,6 +676,20 @@ body {
     line-height: 100%; /* 20px */
 }
 
+//共用元件
+//checkbox
+
+.check {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid $grey-medium;
+    appearance: none;
+}
+.check:checked {
+    background: $primary;
+}
+
 @import "./login.scss";
 @import "./userPage.scss";
 @import "./Organization.scss";

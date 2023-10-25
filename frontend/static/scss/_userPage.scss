@@ -1,9 +1,15 @@
 .userPage {
+    .section1 {
+        margin: 8px 0px 16px 0px;
+    }
+
     .section1_main {
         display: flex;
     }
+
     .avatar {
         padding: 16px 24px 16px 24px;
+        border-right: 1px solid $border-light;
         img {
             width: 104px;
             height: 104px;
@@ -15,6 +21,7 @@
         input {
             display: none;
         }
+
         div {
             display: flex;
             align-items: center;
@@ -25,10 +32,12 @@
             cursor: pointer;
             border-radius: 50px;
             border: 1px solid $border-medium;
+
             &:hover {
                 background-color: #f3cee9;
             }
         }
+
         img {
             position: absolute;
             width: 16px;
@@ -48,6 +57,7 @@
             font-size: 14px;
             font-weight: 700;
         }
+
         input {
             width: 100%;
             border-radius: 4px;
@@ -57,10 +67,12 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
+
         .btn {
             display: flex;
             justify-content: center;
             width: 100%;
+
             button {
                 border-radius: 50px;
                 background: $primary;
@@ -68,10 +80,192 @@
                 padding: 10px 32px 10px 32px;
                 color: #fff;
                 justify-content: center;
+
                 &:hover {
                     transform: scale(1.1);
                 }
             }
+        }
+    }
+
+    .section2 {
+        background: $bg-dropdown;
+    }
+
+    .section2_top,
+    .section3_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .repairBtn,
+    .postBtn {
+        margin-bottom: 16px;
+
+        .Collapse {
+            border: none;
+            background: #fff;
+        }
+    }
+
+    .section2_main,
+    .section3_main {
+        padding-bottom: 48px;
+        overflow-x: auto;
+        table {
+            width: 100%;
+
+            th {
+                padding-top: 13px;
+                padding-bottom: 13px;
+                font-size: 16px;
+                font-weight: 700;
+                border-bottom: 1px solid $border-light;
+            }
+            td {
+                text-align: center;
+                padding: 14px 16px 14px 16px;
+                overflow: hidden;
+                color: #111;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Noto Sans TC;
+                font-size: 12px;
+            }
+
+            tr:nth-child(1) {
+                background-color: $bg-dropdown;
+            }
+            tr:nth-child(2n) {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .section3_main {
+        table {
+            tr:nth-child(1) {
+                background-color: #fff;
+            }
+            tr:nth-child(2n) {
+                background-color: $bg-dropdown;
+            }
+        }
+    }
+}
+
+.btn_new {
+    position: relative;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 8px 10px 28px;
+    background: $primary;
+    border: none;
+}
+
+.btn_delete {
+    color: $primary;
+    border: 1px solid $border-medium;
+    background: #fff;
+
+    position: relative;
+    padding: 10px 8px 10px 28px;
+    border-radius: 50px;
+}
+
+.btn_icon {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+@media (width <= 560px) {
+    .userPage {
+        .section1_main {
+            display: block;
+        }
+
+        .avatar {
+            padding: 16px 24px 16px 24px;
+            border: none;
+            margin-left: 25%;
+            margin-right: 25%;
+            justify-content: center;
+            img {
+                width: 104px;
+                height: 104px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .prettier-input {
+            input {
+                display: none;
+            }
+
+            div {
+                width: 63%;
+            }
+
+            img {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 10px;
+                left: 15px;
+            }
+        }
+
+        .pwd_change {
+            width: 80%;
+        }
+    }
+}
+
+@media (width <= 435px) {
+    .userPage {
+        .avatar {
+            padding: 16px 24px 16px 24px;
+            border: none;
+            margin-left: 20%;
+            margin-right: 20%;
+            justify-content: center;
+            img {
+                width: 104px;
+                height: 104px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .prettier-input {
+            input {
+                display: none;
+            }
+
+            div {
+                width: 50%;
+            }
+
+            img {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        .section1,
+        .section2,
+        .section3 {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 10px;
+        }
+        .section2_top,
+        .section3_top {
+            display: block;
         }
     }
 }

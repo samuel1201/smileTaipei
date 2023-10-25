@@ -525,6 +525,20 @@ body {
   line-height: 100%; /* 20px */
 }
 
+.check {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #969696;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.check:checked {
+  background: #e51d88;
+}
+
 .login {
   margin: 0 auto;
   margin-top: 49px;
@@ -580,11 +594,15 @@ body {
     right: 18px;
   }
 }
+.userPage .section1 {
+  margin: 8px 0px 16px 0px;
+}
 .userPage .section1_main {
   display: flex;
 }
 .userPage .avatar {
   padding: 16px 24px 16px 24px;
+  border-right: 1px solid #f1f1f1;
 }
 .userPage .avatar img {
   width: 104px;
@@ -650,7 +668,162 @@ body {
 .userPage .pwd_change .btn button:hover {
   transform: scale(1.1);
 }
+.userPage .section2 {
+  background: #f9f9f9;
+}
+.userPage .section2_top,
+.userPage .section3_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.userPage .repairBtn,
+.userPage .postBtn {
+  margin-bottom: 16px;
+}
+.userPage .repairBtn .Collapse,
+.userPage .postBtn .Collapse {
+  border: none;
+  background: #fff;
+}
+.userPage .section2_main,
+.userPage .section3_main {
+  padding-bottom: 48px;
+  overflow-x: auto;
+}
+.userPage .section2_main table,
+.userPage .section3_main table {
+  width: 100%;
+}
+.userPage .section2_main table th,
+.userPage .section3_main table th {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #f1f1f1;
+}
+.userPage .section2_main table td,
+.userPage .section3_main table td {
+  text-align: center;
+  padding: 14px 16px 14px 16px;
+  overflow: hidden;
+  color: #111;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Noto Sans TC;
+  font-size: 12px;
+}
+.userPage .section2_main table tr:nth-child(1),
+.userPage .section3_main table tr:nth-child(1) {
+  background-color: #f9f9f9;
+}
+.userPage .section2_main table tr:nth-child(2n),
+.userPage .section3_main table tr:nth-child(2n) {
+  background-color: #fff;
+}
+.userPage .section3_main table tr:nth-child(1) {
+  background-color: #fff;
+}
+.userPage .section3_main table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
 
+.btn_new {
+  position: relative;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 8px 10px 28px;
+  background: #e51d88;
+  border: none;
+}
+
+.btn_delete {
+  color: #e51d88;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  position: relative;
+  padding: 10px 8px 10px 28px;
+  border-radius: 50px;
+}
+
+.btn_icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+@media (width <= 560px) {
+  .userPage .section1_main {
+    display: block;
+  }
+  .userPage .avatar {
+    padding: 16px 24px 16px 24px;
+    border: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+  }
+  .userPage .avatar img {
+    width: 104px;
+    height: 104px;
+    margin-bottom: 8px;
+  }
+  .userPage .prettier-input input {
+    display: none;
+  }
+  .userPage .prettier-input div {
+    width: 63%;
+  }
+  .userPage .prettier-input img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 15px;
+  }
+  .userPage .pwd_change {
+    width: 80%;
+  }
+}
+@media (width <= 435px) {
+  .userPage .avatar {
+    padding: 16px 24px 16px 24px;
+    border: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+  }
+  .userPage .avatar img {
+    width: 104px;
+    height: 104px;
+    margin-bottom: 8px;
+  }
+  .userPage .prettier-input input {
+    display: none;
+  }
+  .userPage .prettier-input div {
+    width: 50%;
+  }
+  .userPage .prettier-input img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 10px;
+  }
+  .userPage .section1,
+  .userPage .section2,
+  .userPage .section3 {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+  }
+  .userPage .section2_top,
+  .userPage .section3_top {
+    display: block;
+  }
+}
 .Organization .top {
   display: flex;
   justify-content: space-between;
@@ -753,18 +926,6 @@ body {
 .backstage .permissionControl th,
 .backstage .permissionControl td {
   padding: 13px 30px 13px 30px;
-}
-.backstage .permissionControl .check {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  border: 1px solid #969696;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.backstage .permissionControl .check:checked {
-  background: #e51d88;
 }
 .backstage .permissionControl .switch {
   position: relative;
