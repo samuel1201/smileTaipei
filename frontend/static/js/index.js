@@ -2,6 +2,7 @@ import homeView from "./views/homeView.js";
 import OrganizationView from "./views/OrganizationView.js";
 import loginView from "./views/loginView.js";
 import backstageView from "./views/backstageView.js";
+import userPageView from "./views/userPageView.js";
 const navigateTo = (url) => {
     history.pushState(null, null, url);
     router();
@@ -33,10 +34,10 @@ const router = async () => {
             path: "/group",
             view: OrganizationView,
         },
-        // {
-        //     path: "/userPage",
-        //     view: () => console.log("view /userPage"),
-        // },
+        {
+            path: "/userPage",
+            view: userPageView,
+        },
         // {
         //     path: "/vote",
         //     view: () => console.log("view /vote"),
