@@ -1,13 +1,14 @@
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
-    constructor() {
-        super();
-        this.setTitle("首頁");
-    }
+  constructor() {
+    super();
+    this.setTitle("首頁");
+  }
 
-    async getHtml() {
-        return `
+  async getHtml() {
+    return `
+		
 		<div class="container">
 
 			<div class="homepage grid2">
@@ -212,5 +213,5 @@ export default class extends AbstractView {
 		</div>
 	</div>
         `;
-    }
+  }
 }

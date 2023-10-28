@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+import AbstractView from "./AbstractView.js";
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Smile Taipei</title>
-	<script src="index.js" defer></script> <!-- 引入index.js -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	<link href="../frontend//static/scss/style.css" rel="stylesheet">
-</head>
+export default class extends AbstractView {
+  constructor() {
+    super();
+    this.setTitle("首頁");
+  }
 
-<body>
-
-	<div class="wrapper">
-		<div class="container">
-
-			<!------------ Content panel ------------>
-			<div class="content">
-
-				<!------------ 公告查詢  ------------>
-
+  async getHtml() {
+    return `
 				<div>
-
 					<div class="searchWrapper">
 						<div class="saerchButtons">
 							<div class="title">公告查詢</div>
@@ -211,13 +197,6 @@
 						</svg>
 					</div>
 				</div>
-
-			</div>
-			<!------------ Content panel end ------------>
-
-		</div>
-	</div>
-
-</body>
-
-</html>
+				`;
+  }
+}

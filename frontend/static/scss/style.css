@@ -1,20 +1,41 @@
+@charset "UTF-8";
 html,
 body {
   font-family: "Roboto";
   font-size: 65%;
+  overflow: hidden;
 }
 
 .wrapper {
   width: 100%;
+  height: 100vh;
   position: relative;
+  background: #f0f0f0;
+  display: grid;
+  grid-template-rows: 56px 48px 1fr 172px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-rows: 56px 1fr 172px;
+  }
+}
+
+#content {
+  padding: 16px 24px;
+}
+
+.contentScroll {
+  width: 100%;
+  overflow: hidden auto;
 }
 
 .container {
-  max-width: 1024px;
+  display: table;
+  max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
   background: #fff;
-  padding: 0 16px;
-  gap: 8px;
 }
 
 .padLR-32px {
@@ -40,7 +61,6 @@ body {
 .homepage {
   grid-template-columns: 1fr 300px;
   grid-column-gap: 16px;
-  padding: 32px 0;
 }
 @media (max-width: 768px) {
   .homepage {
@@ -98,6 +118,10 @@ body {
   position: absolute;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .shadowHeader {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
@@ -114,6 +138,51 @@ body {
   border-right: 1px solid #f1f1f1;
 }
 
+.paginationWrapper {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.paginationWrapper .paginationItem {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: #e51d88;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.paginationWrapper .paginationItem:hover, .paginationWrapper .paginationItem:active {
+  background: #ff73c1;
+}
+.paginationWrapper .paginationItem.solid {
+  background: white;
+  border: 1px solid #dadada;
+  color: #969696;
+}
+.paginationWrapper .paginationItem.solid:hover, .paginationWrapper .paginationItem.solid:active {
+  background: #f0f0f0;
+}
+.paginationWrapper .arrow {
+  transform: rotate(-90deg);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.paginationWrapper .arrow:hover, .paginationWrapper .arrow:active {
+  background: #f0f0f0;
+}
+.paginationWrapper .arrow svg path {
+  fill: #adadad;
+}
+.paginationWrapper .arrow.right {
+  transform: rotate(-270deg);
+}
+
 #header {
   position: sticky;
   top: 0;
@@ -122,16 +191,15 @@ body {
 }
 
 .brandHeader {
-  position: sticky;
-  top: 0;
+  width: calc(100% - 32px);
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
   padding: 8px 16px;
   font-size: 1.4rem;
-  z-index: 3;
   background: white;
+  border-bottom: 1px solid #dadada;
 }
 .brandHeader .userImage {
   width: 40px;
@@ -204,7 +272,7 @@ body {
   border-bottom: 1px solid #f1f1f1;
 }
 .navigationItem:hover, .navigationItem:active {
-  background: #f7f7f7;
+  background: #f0f0f0;
 }
 .navigationItem a {
   cursor: pointer;
@@ -227,7 +295,6 @@ body {
   position: relative;
   width: 100%;
   height: 400px;
-  margin-bottom: 8px;
 }
 @media (max-width: 768px) {
   .bannerCarousel {
@@ -237,7 +304,8 @@ body {
 .bannerCarousel .bannerImg {
   width: 100%;
   height: 100%;
-  background: url(../images/banner/img01.png) no-repeat center/cover;
+  background: url(../images/banner/img01.jpg) no-repeat center;
+  background-size: cover;
   filter: contrast(120%);
 }
 .bannerCarousel .dotWrapper {
@@ -264,17 +332,17 @@ body {
 }
 
 .navigation {
-  position: sticky;
-  top: 56px;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 16px 24px;
   font-size: 1.4rem;
   gap: 24px;
-  z-index: 1;
   background: white;
+  border-bottom: 1px solid #dadada;
 }
 .navigation a {
   color: #111111;
@@ -338,6 +406,53 @@ body {
   background: #ff73c1;
 }
 
+.title.page {
+  height: 64px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111111;
+  padding-left: 12px;
+}
+.title.page:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 4px;
+  height: 24px;
+  background: #ff73c1;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+.custom-checkbox input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark::before {
+  content: "✔";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  color: #e51d88;
+  font-weight: bold;
+}
+
 .tableHeader {
   display: grid;
   font-size: 1.4rem;
@@ -355,6 +470,10 @@ body {
   height: 32px;
 }
 
+.tableHeader.homeAnnouncement.checkbox {
+  grid-template-columns: 32px 104px 88px 1fr;
+}
+
 .tableHeader.homeForum {
   grid-template-columns: 104px 88px 1fr 88px;
   align-items: center;
@@ -367,10 +486,11 @@ body {
   color: #111111;
 }
 .tableList:nth-child(even) {
-  background: #f7f7f7;
+  background: #f0f0f0;
 }
 .tableList span {
   text-align: center;
+  padding: 0 4px;
 }
 .tableList:hover {
   cursor: pointer;
@@ -385,6 +505,9 @@ body {
   align-items: center;
   height: 48px;
 }
+.tableList.homeAnnouncement span {
+  padding: 0 4px;
+}
 .tableList.homeAnnouncement span:nth-child(1) {
   color: #969696;
 }
@@ -394,6 +517,19 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.tableList.homeAnnouncement.checkbox {
+  grid-template-columns: 32px 104px 88px 1fr;
+}
+.tableList.homeAnnouncement.checkbox span:last-child {
+  text-align: left;
+}
+.tableList.homeAnnouncement.checkbox span:nth-child(3) {
+  text-align: center;
+}
+.tableList.homeAnnouncement.checkbox label {
+  justify-self: center;
 }
 
 .tableList.homeForum {
@@ -418,10 +554,10 @@ body {
 }
 
 .button {
-  min-width: 88px;
+  min-width: 80px;
   height: 32px;
   border-radius: 50px;
-  padding: 0 8px;
+  padding: 0 4px;
   background: #e51d88;
   font-size: 1.2rem;
   color: white;
@@ -429,6 +565,20 @@ body {
 .button:hover, .button:active {
   cursor: pointer;
   background: #ff73c1;
+}
+
+.button.solid {
+  background: white;
+  border: 1px solid #dadada;
+}
+.button.solid:hover, .button.solid:active {
+  background: #f0f0f0;
+}
+.button.solid svg path {
+  fill: #e51d88;
+}
+.button.solid span {
+  color: #e51d88;
 }
 
 .bannerWrapper {
@@ -496,10 +646,116 @@ body {
   background: url(../images/banner/banner05.png) no-repeat center/cover;
 }
 
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.searchWrapper .saerchButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+.searchWrapper .searchTools {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 184px) 88px;
+  grid-gap: 8px;
+  height: 48px;
+  align-items: center;
+}
+.searchWrapper .searchTools input {
+  width: calc(100% - 48px);
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  height: 16px;
+  background: #f0f0f0;
+  font-size: 1.2rem;
+  color: #111111;
+  padding: 8px 16px 8px 32px;
+}
+.searchWrapper .searchTools input::-moz-placeholder {
+  color: #adadad;
+}
+.searchWrapper .searchTools input::placeholder {
+  color: #adadad;
+}
+.searchWrapper .searchTools input:focus {
+  outline: none;
+  color: #111111;
+}
+.searchWrapper .searchTools .inputIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+.searchWrapper .searchTools .inputIcon svg path {
+  fill: #e51d88;
+}
+.searchWrapper .searchTools .switchIcon {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+.searchWrapper .searchTools .switchIcon svg {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+.searchWrapper .title {
+  height: 48px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111111;
+  padding-left: 12px;
+  margin: 0;
+}
+.searchWrapper .title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 24px;
+  background: #ff73c1;
+}
+.searchWrapper svg {
+  margin-right: 4px;
+}
+.searchWrapper svg path {
+  fill: white;
+}
+.searchWrapper .verticalLine {
+  width: 1px;
+  height: 40px;
+  margin: 0 8px;
+  background: #f1f1f1;
+}
+.searchWrapper .switchIcon {
+  width: 40px;
+  height: 40px;
+}
+.searchWrapper .switchIcon svg path {
+  fill: #e51d88;
+}
+.searchWrapper .switchIcon.active svg {
+  transform: rotate(180deg);
+}
+
 .footer {
   width: 100%;
   height: 172px;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
+  border: 1px solid #dadada;
 }
 .footer .footerTextWrapper {
   color: #969696;
@@ -524,7 +780,8 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 20px */
+  line-height: 100%;
+  /* 20px */
 }
 
 .check {
@@ -564,7 +821,7 @@ body {
   width: 85%;
   border-radius: 4px;
   border: 1px solid #f1f1f1;
-  background: #f7f7f7;
+  background: #f0f0f0;
   color: #adadad;
   font-size: 14px;
   padding: 8px 8px 8px 32px;
@@ -623,7 +880,7 @@ body {
   color: #e51d88;
   cursor: pointer;
   border-radius: 50px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #dadada;
 }
 .userPage .prettier-input div:hover {
   background-color: #f3cee9;
@@ -649,7 +906,7 @@ body {
   width: 100%;
   border-radius: 4px;
   border: 1px solid #f1f1f1;
-  background: #f7f7f7;
+  background: #f0f0f0;
   padding: 14px 8px 14px 16px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -742,7 +999,7 @@ body {
 
 .btn_delete {
   color: #e51d88;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #dadada;
   background: #fff;
   position: relative;
   padding: 10px 8px 10px 28px;
@@ -853,7 +1110,7 @@ body {
   font-size: 16px;
   padding-left: 36px;
   border: none;
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
 }
 .Organization .top select option {
   padding: 10px 0px 9px 0px;
@@ -936,7 +1193,7 @@ body {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
   outline: none;
   border-radius: 20px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
@@ -956,7 +1213,7 @@ body {
   transform: scale(1.1);
   transition: 0.5s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border: 1px solid #d0d0d0;
+  border: 1px solid #dadada;
 }
 .backstage .permissionControl .switch:checked::before {
   left: 50px;
