@@ -3,6 +3,7 @@ import OrganizationView from "./views/OrganizationView.js";
 import loginView from "./views/loginView.js";
 import backstageView from "./views/backstageView.js";
 import userPageView from "./views/userPageView.js";
+
 const navigateTo = (url) => {
     history.pushState(null, null, url);
     router();

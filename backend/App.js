@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const reload = require('reload');
+const { exec } = require('child_process');
 
 // import object
 const { UserController } = require("./controller/UserController.js");
@@ -30,4 +32,14 @@ app.get("/*", (req, res) => {
     res.sendFile(path.resolve("./frontend", "index.html"));
 });
 
-app.listen(process.env.PORT || 5050, () => console.log("server running"));
+const server = app.listen(process.env.PORT || 5050, () => {
+    console.log("server running");
+    exec('start http://localhost:5050'); // 打開瀏覽器
+});
+
+// Reload code here
+reload(app, { verbose: true, port: 5051 }).then(function (reloadReturned) {
+    console.log("Reload started, start web server");
+}).catch(function (err) {
+    console.error('Reload could not start, could not start server/sample app', err);
+});
