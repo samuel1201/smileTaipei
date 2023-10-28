@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const reload = require('reload');
-const { exec } = require('child_process');
 
 // import object
 const { UserController } = require("./controller/UserController.js");
@@ -34,7 +33,6 @@ app.get("/*", (req, res) => {
 
 const server = app.listen(process.env.PORT || 5050, () => {
     console.log("server running");
-    exec('start http://localhost:5050'); // 打開瀏覽器
 });
 
 // Reload code here
