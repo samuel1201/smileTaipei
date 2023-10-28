@@ -7,7 +7,7 @@ const { UserController } = require("./controller/UserController.js");
 
 app.set("view engine", "ejs");
 
-app.use("/static", express.static(path.resolve("../frontend", "static")));
+app.use("/static", express.static(path.resolve("./frontend", "static")));
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,7 +27,7 @@ app.post("/users/register", (req, res) => {
 });
 
 app.get("/*", (req, res) => {
-    res.sendFile(path.resolve("../frontend", "index.html"));
+    res.sendFile(path.resolve("./frontend", "index.html"));
 });
 
 app.listen(process.env.PORT || 5050, () => console.log("server running"));

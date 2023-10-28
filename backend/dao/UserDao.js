@@ -8,8 +8,9 @@ const { User } = require("../model/User.js");
 // local: mongoose.connect("mongodb://localhost:27017/{database}");
 mongoose
     .connect(
-        "mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongodb_nodejs_commuityinfoplatform?retryWrites=true&w=majority"
-    )
+        // "mongodb+srv://dba:AZ123456az@mongodb.ndz8kr0.mongodb.net/mongodb_nodejs_commuityinfoplatform?retryWrites=true&w=majority"
+        "mongodb+srv://yatayork:pleasure2258@cluster0.ocxssir.mongodb.net/test?retryWrites=true&w=majority"
+        )
     .then(() => {
         console.log("connection success!");
     })

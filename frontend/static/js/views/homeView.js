@@ -8,17 +8,6 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-        <div class="bannerCarousel">
-			<div class="bannerImg"></div>
-			<div class="dotWrapper">
-				<div class="dot active"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</div>
-		</div>
-
 		<div class="container">
 
 			<div class="homepage grid2">
