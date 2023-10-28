@@ -1,11 +1,11 @@
 //------ colors ------//
 
 $primary: #e51d88;
-$secondary: #ff73c1;
+$secondary: #d90e7b;
 $grey-dark: #111111; // lv1
 $grey-medium: #969696; // lv2
 $grey-light: #adadad; // lv3
-$border-light: #f1f1f1;
+$border-light: #ececec;
 $border-medium: #dadada;
 $bg-light-grey: #f0f0f0;
 $bg-medium-grey: #fafafa;
@@ -205,7 +205,7 @@ body {
 		border-radius: 4px;
 		background: $primary;
 		color: white;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		cursor: pointer;
 		&:hover, &:active {
 			background: $secondary;
@@ -217,8 +217,8 @@ body {
 		border: 1px solid $border-medium;
 		color: $grey-medium;
 
-		&:hover, &:active {
-			background: $bg-light-grey;
+		&:hover {
+			background: $bg-medium-grey;
 		}
 	}
 	
@@ -326,7 +326,7 @@ body {
 
 		// .dropdownItem {
 		// 	padding: 12px 16px;
-		// 	font-size: 1.2rem;
+		// 	font-size: 1.4rem;
 		// 	color: $grey-medium;
 		// 	border-bottom: 1px solid $border-light;
 
@@ -499,11 +499,11 @@ body {
 	flex-direction: row;
 	align-items: center;
 	color: $grey-dark;
-	font-weight: bold;
 	margin-bottom: 8px;
 
 	span {
-		font-size: 2rem;
+		font-size: 2.4rem;
+		font-weight: bold;
 		margin-right: 8px;
 	}
 
@@ -519,9 +519,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	font-size: 2rem;
+	font-size: 2.4rem;
 	font-weight: bold;
-	color: $grey-medium;
+	color: $grey-dark;
 	padding-left: 12px;
 
 	&:before {
@@ -541,10 +541,10 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	font-size: 2rem;
-	font-weight: bold;
+	font-size: 2.4rem;
 	color: $grey-dark;
 	padding-left: 12px;
+	font-weight: bold;
 
 	&:before {
 		content: "";
@@ -579,8 +579,8 @@ body {
 	content: "✔";
 	display: block;
 	position: absolute;
-	top: 1px;
-	left: 3px;
+	top: 0;
+	left: 2px;
 	color: $primary;
 	font-weight: bold;
 }
@@ -592,7 +592,9 @@ body {
 	font-size: 1.4rem;
 	font-weight: bold;
 	color: $grey-dark;
+	border-top: 1px solid $border-light;
 	border-bottom: 1px solid $border-light;
+	background: $bg-medium-grey;
 
 	span {
 		text-align: center;
@@ -602,7 +604,7 @@ body {
 .tableHeader.homeAnnouncement {
 	grid-template-columns: 104px 88px 1fr;
 	align-items: center;
-	height: 32px;
+	height: 48px;
 }
 
 .tableHeader.homeAnnouncement.checkbox {
@@ -612,38 +614,36 @@ body {
 .tableHeader.homeForum {
 	grid-template-columns: 104px 88px 1fr 88px;
 	align-items: center;
-	height: 32px;
+	height: 48px;
 }
 
 .tableList {
 	display: grid;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	color: $grey-dark;
 	// transition: all 0.3s ease;
 
-	&:nth-child(even) {
-		background: $bg-light-grey;
-	}
+	border-bottom: 1px solid $border-light;
 
 	span {
 		text-align: center;
-		padding: 0 4px;
+		padding: 0 12px;
+
+		&:first-child {
+			font-size: 1.2rem;
+		}
 	}
 
 	&:hover {
 		cursor: pointer;
-		background: $bg-light-pink;
-	}
-
-	&:active {
-		background: $bg-light-pink;
+		background: $bg-medium-grey;
 	}
 }
 
 .tableList.homeAnnouncement {
 	grid-template-columns: 104px 88px 1fr;
 	align-items: center;
-	height: 48px;
+	height: 64px;
 
 	span {
 		padding: 0 4px;
@@ -667,6 +667,10 @@ body {
 		&:last-child {
 			text-align: left;
 		}
+		&:nth-child(2) {
+			font-size: 1.2rem;
+			color: $grey-medium;
+		}
 		&:nth-child(3) {
 			text-align: center;
 		}
@@ -679,7 +683,7 @@ body {
 .tableList.homeForum {
 	grid-template-columns: 104px 88px 1fr 88px;
 	align-items: center;
-	height: 48px;
+	height: 64px;
 
 	span {
 		&:nth-child(1) {
@@ -701,19 +705,29 @@ body {
 .buttonWrapper {
 	width: 100%;
 	height: 64px;
+
+	a {
+		color: $primary;
+		font-size: 1.4rem;
+		text-decoration: unset;
+    font-weight: bold;
+
+		&:hover {
+			color: $secondary;
+		}
+	}
 }
 
 .button {
-	min-width: 80px;
+	width: max-content;
 	height: 32px;
 	border-radius: 50px;
-	padding: 0 4px;
+	padding: 0 16px;
 	background: $primary;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	color: white;
 
-	&:hover,
-	&:active {
+	&:hover {
 		cursor: pointer;
 		background: $secondary;
 	}
@@ -723,8 +737,8 @@ body {
 	background: white;
 	border: 1px solid $border-medium;
 
-	&:hover, &:active {
-		background: $bg-light-grey;
+	&:hover {
+		background: $bg-medium-grey;
 	}
 
 	svg {
@@ -776,7 +790,7 @@ body {
 
 	span {
 		&:nth-child(1) {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			font-weight: bold;
 			color: $grey-dark;
 		}
@@ -813,6 +827,7 @@ body {
 .searchWrapper {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 24px;
 	
 	.saerchButtons {
 		display: flex;
@@ -823,18 +838,18 @@ body {
 
 	.searchTools {
 		display: grid;
-		grid-template-columns: 1fr repeat(2, 184px) 88px;
+		grid-template-columns: 1fr repeat(2, 184px) min-content;
 		grid-gap: 8px;
-		height: 48px;
+		height: 56px;
 		align-items: center;
 
 		input {
 			width: calc(100% - 48px);
 			border: 1px solid $border-medium;
 			border-radius: 4px;
-			height: 16px;
-			background: $bg-light-grey;
-			font-size: 1.2rem;
+			height: 24px;
+			background: $bg-medium-grey;
+			font-size: 1.4rem;
 			color: $grey-dark;
 			padding: 8px 16px 8px 32px;
 
@@ -885,7 +900,7 @@ body {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		font-size: 2rem;
+		font-size: 2.4rem;
 		font-weight: bold;
 		color: $grey-dark;
 		padding-left: 12px;
@@ -944,7 +959,7 @@ body {
 
 	.footerTextWrapper {
 		color: $grey-medium;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 
 		span {
 			margin-right: 16px;

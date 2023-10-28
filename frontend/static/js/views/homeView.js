@@ -59,7 +59,7 @@ export default class extends AbstractView {
 								<span>1120930 第一屆管理委員會第一次例會會議通知字字字字字字字字字字字字</span>
 							</div>
 							<div class="buttonWrapper flexCenter">
-								<div class="button flexCenter">查看更多</div>
+								<a href="">查看更多</a>
 							</div>
 						</div>
 					</div>
@@ -111,7 +111,7 @@ export default class extends AbstractView {
 								<span>隔壁老王</span>
 							</div>
 							<div class="buttonWrapper flexCenter">
-								<div class="button flexCenter">查看更多</div>
+							<a href="">查看更多</a>
 							</div>
 						</div>
 					</div>
@@ -158,7 +158,7 @@ export default class extends AbstractView {
 								<span>1120930 第一屆管理委員會第一次例會會議通知字字字字字字字字字字字字</span>
 							</div>
 							<div class="buttonWrapper flexCenter">
-								<div class="button flexCenter">查看更多</div>
+							<a href="">查看更多</a>
 							</div>
 						</div>
 					</div>
