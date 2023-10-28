@@ -133,8 +133,7 @@ export default class extends AbstractView {
 							</label>
 							<span>2023-09-30 15:32</span>
 							<span>管理委員會</span>
-							<span>1120930
-								第一屆管理委員會第一次例會會議通知字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字</span>
+							<span>1120930 第一屆管理委員會第一次例會會議通知字字字字字字字字字字字字</span>
 						</div>
 						<div class="tableList homeAnnouncement checkbox">
 							<!-- checkbox -->

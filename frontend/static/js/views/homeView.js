@@ -9,7 +9,6 @@ export default class extends AbstractView {
   async getHtml() {
     return `
 		
-		<div class="container">
 
 			<div class="homepage grid2">
 
@@ -211,7 +210,6 @@ export default class extends AbstractView {
 
 			</div>
 		</div>
-	</div>
         `;
   }
 }
