@@ -477,14 +477,28 @@ body {
   height: 48px;
 }
 
-.tableHeader.communicate.checkbox {
-  grid-template-columns: 32px 104px 1fr repeat(2, 124px) 56px;
+.tableHeader.homeAnnouncement.checkbox {
+  grid-template-columns: 32px 104px 88px 1fr;
+}
+
+.tableHeader.communicate {
+  grid-template-columns: 104px 1fr repeat(2, 124px) 56px;
   align-items: center;
   height: 48px;
 }
 
-.tableHeader.homeAnnouncement.checkbox {
-  grid-template-columns: 32px 104px 88px 1fr;
+.tableHeader.communicate.checkbox {
+  grid-template-columns: 32px 104px 1fr repeat(2, 124px) 56px;
+}
+
+.tableHeader.repair {
+  grid-template-columns: 104px 1fr repeat(3, 88px) 140px 88px;
+  align-items: center;
+  height: 48px;
+}
+
+.tableHeader.repair.checkbox {
+  grid-template-columns: 32px 104px 1fr repeat(3, 88px) 140px 88px;
 }
 
 .tableHeader.homeForum {
@@ -530,28 +544,6 @@ body {
   overflow: hidden;
 }
 
-.tableList.communicate.checkbox {
-  grid-template-columns: 32px 104px 1fr repeat(2, 124px) 56px;
-  align-items: center;
-  height: 64px;
-}
-.tableList.communicate.checkbox span {
-  padding: 0 4px;
-}
-.tableList.communicate.checkbox span:nth-child(1) {
-  color: #969696;
-}
-.tableList.communicate.checkbox span:nth-child(3) {
-  text-align: left;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-.tableList.communicate.checkbox label {
-  justify-self: center;
-}
-
 .tableList.homeAnnouncement.checkbox {
   grid-template-columns: 32px 104px 88px 1fr;
 }
@@ -569,6 +561,102 @@ body {
   justify-self: center;
 }
 
+.tableList.communicate {
+  grid-template-columns: 104px 1fr repeat(2, 124px) 56px;
+}
+.tableList.communicate div {
+  font-size: 1.2rem;
+}
+.tableList.communicate div span:first-child {
+  font-size: 1.5rem;
+  color: #111111;
+}
+.tableList.communicate div span:last-child {
+  color: #969696;
+}
+.tableList.communicate span {
+  padding: 0 4px;
+}
+.tableList.communicate span:nth-child(1) {
+  color: #969696;
+}
+.tableList.communicate span:nth-child(3) {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.tableList.communicate span:nth-child(5), .tableList.communicate span:nth-child(6) {
+  font-size: 1.2rem;
+  color: #969696;
+}
+.tableList.communicate label {
+  justify-self: center;
+}
+
+.tableList.communicate.checkbox {
+  grid-template-columns: 32px 104px 1fr repeat(2, 124px) 56px;
+  align-items: center;
+  height: 64px;
+}
+
+.tableList.repair {
+  grid-template-columns: 104px 1fr repeat(3, 88px) 140px 88px;
+  align-items: center;
+  height: 64px;
+}
+.tableList.repair div {
+  font-size: 1.2rem;
+}
+.tableList.repair div span:first-child {
+  font-size: 1.5rem;
+  color: #111111;
+}
+.tableList.repair div span:last-child {
+  color: #969696;
+}
+.tableList.repair span {
+  padding: 0 4px;
+}
+.tableList.repair span:nth-child(1) {
+  color: #969696;
+}
+.tableList.repair span:nth-child(3) {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.tableList.repair span:nth-child(5), .tableList.repair span:nth-child(6) {
+  font-size: 1.2rem;
+  color: #969696;
+}
+.tableList.repair label {
+  justify-self: center;
+}
+.tableList.repair .switchIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+.tableList.repair .switchIcon svg {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+.tableList.repair .switchIcon.active svg {
+  transform: rotate(180deg);
+}
+
+.tableList.repair.checkbox {
+  grid-template-columns: 32px 104px 1fr repeat(3, 88px) 140px 88px;
+}
+
 .tableList.homeForum {
   grid-template-columns: 104px 88px 1fr 88px;
   align-items: center;
@@ -583,6 +671,15 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.noDataWrapper {
+  width: 100%;
+  height: 200px;
+}
+.noDataWrapper span {
+  font-size: 1.5rem;
+  color: #111111;
 }
 
 input {
@@ -604,6 +701,10 @@ input::placeholder {
 input:focus {
   outline: none;
   color: #111111;
+}
+
+input.noIconBefore {
+  padding: 8px 16px;
 }
 
 .inputIcon {
@@ -764,6 +865,7 @@ input:focus {
 .searchWrapper .saerchButtons .switchIcon {
   width: 40px;
   height: 40px;
+  margin-right: 12px;
 }
 .searchWrapper .saerchButtons .switchIcon svg {
   width: 16px;
@@ -820,6 +922,9 @@ input:focus {
   width: 12px;
   height: 12px;
   margin: 0;
+}
+.searchWrapper .searchTools.repair {
+  grid-template-columns: 1fr repeat(3, 184px) min-content;
 }
 .searchWrapper .title {
   height: 48px;

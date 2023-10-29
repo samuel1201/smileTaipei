@@ -5,6 +5,7 @@ import backstageView from "./views/backstageView.js";
 import userPageView from "./views/userPageView.js";
 import announcementsView from "./views/announcementsView.js";
 import communicateView from "./views/communicateView.js";
+import repairView from "./views/repairView.js";
 
 const navigateTo = (url) => {
   history.pushState(null, null, url);
@@ -29,10 +30,10 @@ const router = async () => {
       path: "/communicate",
       view: communicateView,
     },
-    // {
-    //     path: "/repair",
-    //     view: () => console.log("view /repair"),
-    // },
+    {
+      path: "/repair",
+      view: repairView,
+    },
     {
       path: "/group",
       view: OrganizationView,
