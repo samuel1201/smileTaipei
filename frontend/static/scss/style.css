@@ -6,6 +6,17 @@ body {
   overflow: hidden;
 }
 
+.greyOut {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.32);
+}
+
 .wrapper {
   height: 100vh;
   position: relative;
@@ -31,7 +42,7 @@ body {
 
 .container {
   display: table;
-  width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   background: #fff;
@@ -96,6 +107,10 @@ body {
   gap: 16px;
 }
 
+.space32 {
+  height: 32px;
+}
+
 .relative {
   position: relative;
 }
@@ -132,6 +147,10 @@ body {
 
 .shadowOP16 {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+.marginRight8 {
+  margin-right: 8px;
 }
 
 .bottom_border {
@@ -171,19 +190,33 @@ body {
 .paginationWrapper .paginationItem.solid:hover {
   background: #fafafa;
 }
-.paginationWrapper .arrow {
+
+.arrow {
   transform: rotate(-90deg);
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
-.paginationWrapper .arrow:hover, .paginationWrapper .arrow:active {
+.arrow:hover, .arrow:active {
   background: #f0f0f0;
 }
-.paginationWrapper .arrow svg path {
+.arrow svg path {
   fill: #adadad;
 }
-.paginationWrapper .arrow.right {
+
+.arrow.small {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.arrow.small svg {
+  width: 12px;
+}
+.arrow.small svg path {
+  fill: #e51d88;
+}
+
+.arrow.right {
   transform: rotate(-270deg);
 }
 
@@ -682,6 +715,99 @@ body {
   color: #111111;
 }
 
+.backToWrapper {
+  width: 100%;
+  padding: 8px 0;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.backToWrapper a {
+  font-size: 1.4rem;
+  color: #e51d88;
+  text-decoration: unset;
+}
+.backToWrapper a:hover {
+  color: #d90e7b;
+}
+
+.announcementsTitle {
+  width: 100%;
+}
+.announcementsTitle span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.announcementsTitleInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  border-bottom: 1px solid #dadada;
+}
+.announcementsTitleInfo span,
+.announcementsTitleInfo a {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.announcementsTitleInfo a {
+  cursor: pointer;
+}
+.announcementsTitleInfo a:hover {
+  color: #e51d88;
+}
+.announcementsTitleInfo svg {
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+.announcementsTitleInfo svg path {
+  fill: #e51d88;
+}
+
+.announcementsContent {
+  width: 100%;
+  height: auto;
+  padding: 24px 0 8px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #111111;
+  float: left;
+}
+.announcementsContent img {
+  margin: 16px 0;
+  display: block;
+}
+
+textarea {
+  width: calc(100% - 32px);
+  height: 320px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background: #fafafa;
+  font-size: 1.4rem;
+  color: #111111;
+  padding: 16px 8px;
+  line-height: 2.1rem;
+}
+textarea::-moz-placeholder {
+  color: #adadad;
+}
+textarea::placeholder {
+  color: #adadad;
+}
+textarea:focus {
+  outline: none;
+  color: #111111;
+}
+
+textarea.small {
+  height: 24px;
+  padding: 16px 8px;
+}
+
 input {
   width: calc(100% - 48px);
   border: 1px solid #ececec;
@@ -704,7 +830,34 @@ input:focus {
 }
 
 input.noIconBefore {
+  width: calc(100% - 32px);
   padding: 8px 16px;
+}
+
+.inputTitle {
+  font-size: 1.4rem;
+  color: #111111;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.inputMessgaeWrapper {
+  background: #fcedf4;
+  padding: 8px;
+  width: calc(100% - 16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  color: #111111;
+  font-size: 1.4rem;
+}
+.inputMessgaeWrapper svg {
+  width: 24px;
+  height: 24px;
+}
+.inputMessgaeWrapper svg path {
+  fill: #969696;
 }
 
 .inputIcon {
@@ -722,6 +875,7 @@ input.noIconBefore {
 .buttonWrapper {
   width: 100%;
   height: 64px;
+  gap: 8px;
 }
 .buttonWrapper a {
   color: #e51d88;
@@ -751,6 +905,7 @@ input.noIconBefore {
 .button.solid {
   background: white;
   border: 1px solid #ececec;
+  color: #969696;
 }
 .button.solid:hover {
   background: #fafafa;

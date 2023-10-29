@@ -2,6 +2,7 @@
 
 $primary: #e51d88;
 $secondary: #d90e7b;
+$third: #fcedf4;
 $grey-dark: #111111; // lv1
 $grey-medium: #969696; // lv2
 $grey-light: #adadad; // lv3
@@ -42,6 +43,17 @@ body {
   overflow: hidden;
 }
 
+.greyOut {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.32);
+}
+
 .wrapper {
   height: 100vh;
   position: relative;
@@ -66,8 +78,8 @@ body {
 
 .container {
   display: table;
-  width: 1200px;
-  // width: 100%;
+  // width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   background: #fff;
@@ -138,6 +150,10 @@ body {
   gap: 16px;
 }
 
+.space32 {
+  height: 32px;
+}
+
 //------ position ------//
 
 .relative {
@@ -181,7 +197,9 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 16%);
 }
 
-//共用 邊框
+.marginRight8 {
+  margin-right: 8px;
+}
 
 //下邊框
 .bottom_border {
@@ -226,25 +244,38 @@ body {
       background: $bg-medium-grey;
     }
   }
+}
+.arrow {
+  transform: rotate(-90deg);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background: $bg-light-grey;
+  }
+  svg {
+    path {
+      fill: $grey-light;
+    }
+  }
+}
 
-  .arrow {
-    transform: rotate(-90deg);
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    &:hover,
-    &:active {
-      background: $bg-light-grey;
-    }
-    svg {
-      path {
-        fill: $grey-light;
-      }
+.arrow.small {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  svg {
+    width: 12px;
+    path {
+      fill: $primary;
     }
   }
-  .arrow.right {
-    transform: rotate(-270deg);
-  }
+}
+
+.arrow.right {
+  transform: rotate(-270deg);
 }
 
 //------ brand header ------//
@@ -855,7 +886,107 @@ body {
   }
 }
 
+//------ back to ------//
+.backToWrapper {
+  width: 100%;
+  padding: 8px 0;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  a {
+    font-size: 1.4rem;
+    color: $primary;
+    text-decoration: unset;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.announcementsTitle {
+  width: 100%;
+
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.announcementsTitleInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  border-bottom: 1px solid $border-medium;
+
+  span,
+  a {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  a {
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  svg {
+    margin-right: 4px;
+    margin-bottom: 2px;
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.announcementsContent {
+  width: 100%;
+  height: auto;
+  padding: 24px 0 8px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: $grey-dark;
+  float: left;
+
+  img {
+    margin: 16px 0;
+    display: block;
+  }
+}
+
 //------ input ------//
+textarea {
+  width: calc(100% - 32px);
+  height: 320px;
+  border: 1px solid $border-light;
+  border-radius: 4px;
+  background: $bg-medium-grey;
+  font-size: 1.4rem;
+  color: $grey-dark;
+  padding: 16px 8px;
+  line-height: 2.1rem;
+
+  &::placeholder {
+    color: $grey-light;
+  }
+
+  &:focus {
+    outline: none;
+    color: $grey-dark;
+  }
+}
+
+textarea.small {
+  height: 24px;
+  padding: 16px 8px;
+}
+
 input {
   width: calc(100% - 48px);
   border: 1px solid $border-light;
@@ -877,7 +1008,35 @@ input {
 }
 
 input.noIconBefore {
+  width: calc(100% - 32px);
   padding: 8px 16px;
+}
+
+.inputTitle {
+  font-size: 1.4rem;
+  color: $grey-dark;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.inputMessgaeWrapper {
+  background: $third;
+  padding: 8px;
+  width: calc(100% - 16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  color: $grey-dark;
+  font-size: 1.4rem;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    path {
+      fill: $grey-medium;
+    }
+  }
 }
 
 .inputIcon {
@@ -900,6 +1059,7 @@ input.noIconBefore {
 .buttonWrapper {
   width: 100%;
   height: 64px;
+  gap: 8px;
 
   a {
     color: $primary;
@@ -931,6 +1091,7 @@ input.noIconBefore {
 .button.solid {
   background: white;
   border: 1px solid $border-light;
+  color: $grey-medium;
 
   &:hover {
     background: $bg-medium-grey;
@@ -1188,12 +1349,14 @@ input.noIconBefore {
       }
     }
   }
+
   .switchIcon.active {
     svg {
       transform: rotate(180deg);
     }
   }
 }
+//------ popup ------//
 
 //------ footer ------//
 
@@ -1237,8 +1400,7 @@ input.noIconBefore {
   /* 20px */
 }
 
-//共用元件
-//checkbox
+//共用元件 checkbox
 
 .check {
   width: 16px;
