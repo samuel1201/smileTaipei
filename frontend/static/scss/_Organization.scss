@@ -1,73 +1,120 @@
 .Organization {
-    .top {
-        display: flex;
-        justify-content: space-between;
-        h2 {
-            display: flex;
-            font-size: 20px;
-            border-left: 4px solid $secondary;
-            padding-left: 8px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            align-items: end;
-        }
-        .selection {
-            margin-top: 20px;
-            img {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-            }
-        }
-        select {
-            width: 184px;
-            height: 40px;
-            font-size: 16px;
-            padding-left: 36px;
-            border: none;
-            background-color: $bg-light-grey;
-            option {
-                padding: 10px 0px 9px 0px;
-            }
-        }
-    }
-    .boxes {
-        padding-top: 25px;
-        display: grid;
 
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 120px;
-        text-align: center;
-        div {
-            border-bottom: 1px solid $grey-light;
-            margin-bottom: 32px;
-            h3 {
-                margin-top: 8px;
-                margin-bottom: 15px;
-                font-size: 16px;
-                font-weight: 700;
-            }
-            h4 {
-                color: $grey-light;
-                font-size: 12px;
-            }
-        }
-    }
-    @media (420px<= width <= 768px) {
-        .top {
-            display: block;
-        }
-        .boxes {
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 60px;
-        }
-    }
-    @media (width < 420px) {
-        .top {
-            display: block;
-        }
-        .boxes {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
+	input {
+		width: 200px;
+		padding: 8px 16px 8px 40px;
+
+		svg {
+			margin-right: 8px;
+		}
+	}
+
+	.top {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			display: flex;
+			font-size: 20px;
+			border-left: 4px solid $secondary;
+			padding-left: 8px;
+			margin-bottom: 20px;
+			font-weight: 700;
+			align-items: end;
+		}
+
+		.selection {
+			margin-top: 20px;
+
+			img {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+		}
+
+		select {
+			width: 184px;
+			height: 40px;
+			font-size: 16px;
+			padding-left: 36px;
+			border: none;
+			background-color: $bg-light-grey;
+
+			option {
+				padding: 10px 0px 9px 0px;
+			}
+		}
+	}
+
+	.switchIcon {
+		position: absolute;
+		right: 4px;
+		top: 46%;
+		width: 24px;
+		height: 24px;
+		transform: translateY(-50%);
+		margin-right: 0 !important;
+
+		svg {
+			width: 12px;
+			height: 12px;
+			margin: 0;
+		}
+	}
+
+	.boxes {
+		padding-top: 25px;
+		display: grid;
+
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 120px;
+		text-align: center;
+
+		img {
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+		}
+
+		div {
+			border-bottom: 1px solid $border-medium;
+			margin-bottom: 32px;
+
+			h3 {
+				margin: 8px 0;
+				font-size: 2rem;
+				font-weight: 700;
+				color: $grey-dark;
+			}
+
+			h4 {
+				margin: 8px 0;
+				color: $grey-light;
+				font-size: 1.5rem;
+				font-weight: normal;
+			}
+		}
+	}
+
+	@media (420px<=width <=768px) {
+		.top {
+			display: block;
+		}
+
+		.boxes {
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 60px;
+		}
+	}
+
+	@media (width < 420px) {
+		.top {
+			display: block;
+		}
+
+		.boxes {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
 }

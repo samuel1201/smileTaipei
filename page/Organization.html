@@ -2,137 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-    <link href="../frontend/static/scss/style.css" rel="stylesheet" />
-    <title>Smile Taipei</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smile Taipei</title>
+	<script src="index.js" defer></script> <!-- 引入index.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href="../frontend//static/scss/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="brandHeader shadowHeader">
-                <div>
-                    <a href="../index.html"><img src="../frontend/static/icon/logo.svg" /></a>
-                </div>
-                <div class="flexRow gap8">
-                    <div class="userImage"></div>
-                    <div class="userName hidden">Hello! User Name</div>
-                    <div class="menu">
-                        <div class="iconWrapper flexCenter">
-                            <img src="../frontend/static/icon/menu.svg" />
-                        </div>
 
-                        <!-- <div class="dropdownWrapper shadowOP16 show">
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../frontend/static/icon/add.svg" />
-                                        <span>新增公告</span>
-                                    </div>
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../icon/edit.svg" />
-                                        <span>編輯</span>
-                                    </div>
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../icon/delete.svg" />
-                                        <span>刪除</span>
-                                    </div>
-        
-                                </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="navigation hidden">
-                <a href="/home" class="active" data-link>微笑台北 </a>
-                <a href="/announcements" data-link>住戶公告</a>
-                <a href="/communicate" data-link>住戶交流</a>
-                <a href="/repair" data-link>公共報修</a>
-                <a href="/group" data-link>組織架構</a>
-                <a href="/userPage" data-link>用戶中心</a>
-                <a href="/vote" data-link>投票表決</a>
-                <a href="/backStage" data-link>後台登入</a>
-            </div>
-            <div id="content">
-                <div class="Organization padLR-32px">
-                    <!--title和下拉選單-->
-                    <div class="top">
-                        <h2>現任社區管理委員會列表</h2>
-                        <div class="selection relative">
-                            <img src="../frontend/static/icon/star.png" alt="123" />
-                            <select>
-                                <option value="" disabled selected>歷屆管理委員會</option>
-                                <option>第一屆</option>
-                                <option>第二屆</option>
-                                <option>第三屆</option>
-                                <option>第四屆</option>
-                                <option>第五屆</option>
-                                <option>第六屆</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!--人員 真人頭像職位與姓名區域-->
-                    <div class="boxes">
-                        <div id="1">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="2">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="3">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="4">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="5">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="6">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="7">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="8">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                        <div id="9">
-                            <img src="../frontend/static/icon/Ellipse3.png" alt="13" />
-                            <h3>王曉明</h3>
-                            <h4>總理事</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer flexCenter flexColumn gap16">
-                <img src="../frontend/static/icon/footerLogo.svg" />
-                <div class="footerTextWrapper flexRow">
-                    <span>&nbsp;smileTaipei@smileTaipei.com</span>
-                    <span>臺北市信義區基隆路1段155號13樓之5</span>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="wrapper">
+		<div class="container">
+			<div id="content">
+				<div class="Organization padLR-32px">
+					<!--title和下拉選單-->
+					<div class="searchWrapper">
+
+						<div class="saerchButtons">
+							<div class="title">現任社區管理委員會列表</div>
+							<div class="flexRow gap8">
+
+								<!-- input -->
+								<div class="relative">
+									<input type="text" placeholder="歷屆管理委員會" readonly class="cursor">
+									<div class="inputIcon flexCenter">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M9.9998 4.075L11.7248 7.5625L12.0123 8.1875L12.6373 8.28125L16.4873 8.8375L13.7498 11.525L13.2811 11.9813L13.3936 12.6063L14.0498 16.4375L10.6061 14.6312L9.9998 14.375L9.41855 14.6812L5.97481 16.4625L6.59981 12.6312L6.7123 12.0062L6.2498 11.525L3.4873 8.80625L7.3373 8.25L7.9623 8.15625L8.2498 7.53125L9.9998 4.075ZM9.9998 1.25L7.15605 7.0125L0.799805 7.93125L5.39981 12.4188L4.3123 18.75L9.9998 15.7625L15.6873 18.75L14.5998 12.4188L19.1998 7.9375L12.8436 7.0125L9.9998 1.25Z"
+												fill="#E51D88" />
+										</svg>
+
+									</div>
+									<!-- 開關圖示 180轉向掛avtive -->
+									<div class="switchIcon avtive flexCenter cursor">
+										<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.499805L0.5 7.99981L1.55 9.0498L8 2.5998L14.45 9.0498L15.5 7.99981L8 0.499805Z"
+												fill="#E51D88" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--人員 真人頭像職位與姓名區域-->
+					<div class="boxes">
+						<div id="1">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="2">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="3">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="4">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="5">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="6">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="7">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="8">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+						<div id="9">
+							<img src="../frontend/static/icon/Ellipse3.png" alt="13" />
+							<h3>王曉明</h3>
+							<h4>委員</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+
 </body>
 
 </html>
