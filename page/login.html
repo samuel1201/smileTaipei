@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Smile Taipei</title>
-        <!-- 引入index.js -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-        <link href="../frontend/static/scss/style.css" rel="stylesheet" />
-    </head>
 
-    <body>
-        <div class="wrapper">
-            <div class="container">
-                <div class="brandHeader shadowHeader">
-                    <div>
-                        <a href="../index.html"><img src="../frontend/static/icon/logo.svg" /></a>
-                    </div>
-                    <div class="flexRow gap8">
-                        <div class="userImage"></div>
-                        <div class="userName hidden">Hello! User Name</div>
-                        <div class="menu">
-                            <div class="iconWrapper flexCenter">
-                                <img src="../frontend/static/icon/menu.svg" />
-                            </div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smile Taipei</title>
+	<script src="index.js" defer></script> <!-- 引入index.js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href="../frontend//static/scss/style.css" rel="stylesheet">
+</head>
 
-                            <!-- <div class="dropdownWrapper shadowOP16 show">
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../frontend/static/icon/add.svg" />
-                                        <span>新增公告</span>
-                                    </div>
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../icon/edit.svg" />
-                                        <span>編輯</span>
-                                    </div>
-        
-                                    <div class="dropdownItem flexRow">
-                                        <img src="../icon/delete.svg" />
-                                        <span>刪除</span>
-                                    </div>
-        
-                                </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="navigation hidden">
-                    <a href="/home" class="active" data-link>微笑台北 </a>
-                    <a href="/announcements" data-link>住戶公告</a>
-                    <a href="/communicate" data-link>住戶交流</a>
-                    <a href="/repair" data-link>公共報修</a>
-                    <a href="/group" data-link>組織架構</a>
-                    <a href="/userPage" data-link>用戶中心</a>
-                    <a href="/vote" data-link>投票表決</a>
-                    <a href="/backStage" data-link>後台登入</a>
-                </div>
-                <div id="content">
-                    <div class="login relative">
-                        <h3 class="h3type">用戶登入</h3>
-                        <div class="relative">
-                            <img src="../frontend/static/icon/user.svg" alt="帳號icon" class="icon" />
-                            <input type="text" placeholder="請輸入使用者名稱" /><br />
-                            <p class="accountAlert">查無此帳號，請洽詢管理員。</p>
-                        </div>
-                        <div class="relative">
-                            <img src="../frontend/static/icon/password.svg" alt="帳號icon" class="icon" />
-                            <input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" />
-                            <p class="pwdAlert">密碼輸入錯誤，請洽詢管理員</p>
-                        </div>
-                        <button type="submit">登入</button>
-                    </div>
-                </div>
-                <div class="footer flexCenter flexColumn gap16">
-                    <img src="../frontend/static/icon/footerLogo.svg" />
-                    <div class="footerTextWrapper flexRow">
-                        <span>02-1234567890&nbsp;&nbsp;&nbsp;&nbsp;smileTaipei@smileTaipei.com</span>
-                        <span>臺北市信義區基隆路1段155號13樓之5</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+<body>
+
+	<div class="wrapper">
+		<div class="container">
+
+			<div class="content">
+				<div class="login">
+					<div class="title page">用戶登入</div>
+
+					<!-- <div class="relative">
+						<img src="../frontend/static/icon/user.svg" alt="帳號icon" class="icon" />
+						<input type="text" placeholder="請輸入使用者名稱" /><br />
+						<p class="accountAlert">查無此帳號，請洽詢管理員。</p>
+					</div> -->
+
+					<!-- input -->
+					<div class="relative">
+						<input type="text" placeholder="請輸入帳號">
+						<div class="inputIcon flexCenter ">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="none">
+								<path
+									d="M8 2C8.49445 2 8.9778 2.14662 9.38893 2.42133C9.80005 2.69603 10.1205 3.08648 10.3097 3.54329C10.4989 4.00011 10.5484 4.50277 10.452 4.98773C10.3555 5.47268 10.1174 5.91814 9.76777 6.26777C9.41814 6.6174 8.97268 6.8555 8.48773 6.95196C8.00277 7.04843 7.50011 6.99892 7.04329 6.8097C6.58648 6.62048 6.19603 6.30005 5.92133 5.88893C5.64662 5.4778 5.5 4.99445 5.5 4.5C5.5 3.83696 5.76339 3.20107 6.23223 2.73223C6.70107 2.26339 7.33696 2 8 2ZM8 1C7.30777 1 6.63108 1.20527 6.0555 1.58986C5.47993 1.97444 5.03133 2.52107 4.76642 3.16061C4.50152 3.80015 4.4322 4.50388 4.56725 5.18282C4.7023 5.86175 5.03564 6.48539 5.52513 6.97487C6.01461 7.46436 6.63825 7.7977 7.31718 7.93275C7.99612 8.0678 8.69985 7.99849 9.33939 7.73358C9.97893 7.46867 10.5256 7.02007 10.9101 6.4445C11.2947 5.86892 11.5 5.19223 11.5 4.5C11.5 3.57174 11.1313 2.6815 10.4749 2.02513C9.8185 1.36875 8.92826 1 8 1ZM13 15H12V12.5C12 12.1717 11.9353 11.8466 11.8097 11.5433C11.6841 11.24 11.4999 10.9644 11.2678 10.7322C11.0356 10.5001 10.76 10.3159 10.4567 10.1903C10.1534 10.0647 9.8283 10 9.5 10H6.5C5.83696 10 5.20107 10.2634 4.73223 10.7322C4.26339 11.2011 4 11.837 4 12.5V15H3V12.5C3 11.5717 3.36875 10.6815 4.02513 10.0251C4.6815 9.36875 5.57174 9 6.5 9H9.5C10.4283 9 11.3185 9.36875 11.9749 10.0251C12.6313 10.6815 13 11.5717 13 12.5V15Z"
+									fill="#FF468F" />
+							</svg>
+						</div>
+					</div>
+
+					<div class="inputMessgaeWrapper">
+						查無此帳號，請洽詢管理員
+					</div>
+
+					<div class="relative">
+						<input type="text" placeholder="請輸入密碼">
+						<div class="inputIcon flexCenter">
+							<svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g id="icon / password">
+									<path id="Vector"
+										d="M10.5 1C9.7973 0.999839 9.10433 1.16428 8.47662 1.48015C7.84892 1.79603 7.30393 2.25454 6.88533 2.81896C6.46673 3.38337 6.18617 4.038 6.06611 4.73037C5.94606 5.42274 5.98986 6.1336 6.194 6.806L1 12V15H4L9.194 9.806C9.81295 9.99388 10.4651 10.0461 11.1061 9.95914C11.7471 9.87217 12.3617 9.64804 12.9082 9.30202C13.4548 8.95601 13.9202 8.49624 14.273 7.95405C14.6257 7.41187 14.8575 6.8 14.9524 6.16016C15.0472 5.52033 15.0031 4.86755 14.8229 4.24632C14.6427 3.62509 14.3307 3.05002 13.9081 2.56028C13.4855 2.07054 12.9624 1.67766 12.3742 1.40841C11.7861 1.13915 11.1468 0.99985 10.5 1ZM10.5 9C10.1558 8.99981 9.81342 8.94893 9.484 8.849L8.9105 8.675L8.487 9.0985L6.8965 10.689L6.207 10L5.5 10.707L6.1895 11.3965L5.3965 12.1895L4.707 11.5L4 12.207L4.6895 12.8965L3.586 14H2V12.414L6.901 7.513L7.325 7.0895L7.151 6.516C6.93729 5.8115 6.95117 5.05754 7.19068 4.36138C7.43018 3.66522 7.8831 3.06231 8.48502 2.63841C9.08694 2.21451 9.8072 1.99121 10.5433 2.00027C11.2795 2.00932 11.994 2.25028 12.5854 2.68886C13.1767 3.12744 13.6146 3.74131 13.8369 4.44315C14.0592 5.14499 14.0545 5.89906 13.8236 6.59809C13.5926 7.29712 13.1471 7.90553 12.5504 8.33675C11.9537 8.76797 11.2362 9.00006 10.5 9Z"
+										fill="#FF468F" />
+									<path id="Vector_2"
+										d="M11 6C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4C10.4477 4 10 4.44772 10 5C10 5.55228 10.4477 6 11 6Z"
+										fill="#FF468F" />
+								</g>
+							</svg>
+
+						</div>
+					</div>
+
+					<div class="inputMessgaeWrapper">
+						密碼輸入錯誤，請洽詢管理員
+					</div>
+
+					<div class="buttonWrapper flexCenter">
+						<div class="button flexCenter">登入</button>
+						</div>
+
+
+						<!-- <div class="relative">
+						<img src="../frontend/static/icon/password.svg" alt="帳號icon" class="icon" />
+						<input type="password" name="pwd" id="pwd" placeholder="請輸入密碼" />
+						<p class="pwdAlert">密碼輸入錯誤，請洽詢管理員</p>
+					</div> -->
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+</body>
+
 </html>

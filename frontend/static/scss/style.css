@@ -34,6 +34,11 @@ body {
 #content {
   padding: 16px 24px;
 }
+@media (max-width: 768px) {
+  #content {
+    width: calc(100% - 48px);
+  }
+}
 
 .contentScroll {
   width: 100%;
@@ -42,7 +47,8 @@ body {
 
 .container {
   display: table;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   background: #fff;
@@ -462,7 +468,7 @@ body {
   top: 18px;
   width: 4px;
   height: 24px;
-  background: #d90e7b;
+  background: #ff73c1;
 }
 
 .custom-checkbox {
@@ -842,7 +848,7 @@ input.noIconBefore {
 }
 
 .inputMessgaeWrapper {
-  background: #fcedf4;
+  background: #ff73c1;
   padding: 8px;
   width: calc(100% - 16px);
   display: flex;
@@ -892,7 +898,7 @@ input.noIconBefore {
   width: max-content;
   height: 32px;
   border-radius: 50px;
-  padding: 0 16px;
+  padding: 0 24px;
   background: #e51d88;
   font-size: 1.4rem;
   color: white;
@@ -1177,57 +1183,99 @@ input.noIconBefore {
 
 .login {
   margin: 0 auto;
-  margin-top: 49px;
-  margin-bottom: 57px;
   border-radius: 8px;
   background: #fff;
-  /* shadow 1 */
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
-  width: 33%;
-  padding: 32px 24px 88px 24px;
+  width: 500px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.login h3 {
-  font-weight: 700;
-}
-.login .icon {
-  position: absolute;
-  top: 18px;
-  left: 5px;
+@media (max-width: 768px) {
+  .login {
+    padding: 32px 0;
+  }
 }
 .login input {
-  width: 85%;
-  border-radius: 4px;
+  width: calc(100% - 56px);
   border: 1px solid #ececec;
-  background: #f0f0f0;
-  color: #adadad;
-  font-size: 14px;
-  padding: 8px 8px 8px 32px;
-  margin-top: 16px;
-}
-.login button {
-  position: absolute;
-  right: 36px;
-  bottom: 32px;
-  margin-top: 16px;
-  padding: 13px 38px 13px 38px;
-  border: none;
   border-radius: 4px;
-  background: #ff468f;
-  font-size: 14px;
-  color: #fff;
+  height: 24px;
+  background: #fafafa;
+  font-size: 1.4rem;
+  color: #111111;
+  padding: 8px 16px 8px 40px;
+}
+.login input::-moz-placeholder {
+  color: #adadad;
+}
+.login input::placeholder {
+  color: #adadad;
+}
+.login input:focus {
+  outline: none;
+  color: #111111;
+}
+.login .inputTitle {
+  font-size: 1.4rem;
+  color: #111111;
+  padding: 8px 0;
+  font-weight: bold;
+}
+.login .inputMessgaeWrapper {
+  background: white;
+  display: flex;
+  align-items: center;
+  color: #e51d88;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 8px 0;
+}
+.login .inputMessgaeWrapper svg {
+  width: 24px;
+  height: 24px;
+}
+.login .inputMessgaeWrapper svg path {
+  fill: #969696;
+}
+.login .title.page {
+  border-bottom: 1px solid #dadada;
+  width: calc(100% - 12px);
 }
 
-@media (width <= 768px) {
-  .login {
-    width: 50%;
-  }
+.buttonWrapper {
+  width: 100%;
+  height: 48px;
+  gap: 8px;
 }
-@media (width <= 420px) {
+.buttonWrapper a {
+  color: #e51d88;
+  font-size: 1.4rem;
+  text-decoration: unset;
+  font-weight: bold;
+}
+.buttonWrapper a:hover {
+  color: #d90e7b;
+}
+
+.button {
+  width: -moz-max-content;
+  width: max-content;
+  height: 32px;
+  border-radius: 50px;
+  padding: 4px 24px;
+  background: #e51d88;
+  font-size: 1.4rem;
+  color: white;
+}
+.button:hover {
+  cursor: pointer;
+  background: #d90e7b;
+}
+
+@media (max-width: 768px) {
   .login {
-    width: 70%;
-  }
-  .login button {
-    right: 18px;
+    width: 100%;
   }
 }
 .userPage .section1 {

@@ -2,7 +2,7 @@
 
 $primary: #e51d88;
 $secondary: #d90e7b;
-$third: #fcedf4;
+$third: #ff73c1;
 $grey-dark: #111111; // lv1
 $grey-medium: #969696; // lv2
 $grey-light: #adadad; // lv3
@@ -69,6 +69,10 @@ body {
 
 #content {
   padding: 16px 24px;
+
+  @include pad {
+    width: calc(100% - 48px);
+  }
 }
 
 .contentScroll {
@@ -78,8 +82,8 @@ body {
 
 .container {
   display: table;
-  width: 1200px;
-  // width: 100%;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   background: #fff;
@@ -594,7 +598,7 @@ body {
     top: 18px;
     width: 4px;
     height: 24px;
-    background: $secondary;
+    background: $third;
   }
 }
 
@@ -1077,7 +1081,7 @@ input.noIconBefore {
   width: max-content;
   height: 32px;
   border-radius: 50px;
-  padding: 0 16px;
+  padding: 0 24px;
   background: $primary;
   font-size: 1.4rem;
   color: white;

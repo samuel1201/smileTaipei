@@ -1,58 +1,103 @@
 //login頁面
 .login {
-    margin: 0 auto;
-    margin-top: 49px;
-    margin-bottom: 57px;
-    border-radius: 8px;
-    background: #fff;
-    /* shadow 1 */
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
-    width: 33%;
-    padding: 32px 24px 88px 24px;
-    h3 {
-        font-weight: 700;
-    }
-    .icon {
-        position: absolute;
-        top: 18px;
-        left: 5px;
-    }
-    input {
-        width: 85%;
-        border-radius: 4px;
-        border: 1px solid $border-light;
-        background: $bg-light-grey;
-        color: $grey-light;
-        font-size: 14px;
-        padding: 8px 8px 8px 32px;
-        margin-top: 16px;
-    }
-    button {
-        position: absolute;
-        right: 36px;
-        bottom: 32px;
-        margin-top: 16px;
-        padding: 13px 38px 13px 38px;
-        border: none;
-        border-radius: 4px;
-        background: #ff468f;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #fff;
+  width: 500px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-        font-size: 14px;
-        color: #fff;
+  @include pad {
+    padding: 32px 0;
+  }
+
+  input {
+    width: calc(100% - 56px);
+    border: 1px solid $border-light;
+    border-radius: 4px;
+    height: 24px;
+    background: $bg-medium-grey;
+    font-size: 1.4rem;
+    color: $grey-dark;
+    padding: 8px 16px 8px 40px;
+
+    &::placeholder {
+      color: $grey-light;
     }
+
+    &:focus {
+      outline: none;
+      color: $grey-dark;
+    }
+  }
+
+  .inputTitle {
+    font-size: 1.4rem;
+    color: $grey-dark;
+    padding: 8px 0;
+    font-weight: bold;
+  }
+
+  .inputMessgaeWrapper {
+    background: white;
+    display: flex;
+    align-items: center;
+    color: $primary;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 8px 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        fill: $grey-medium;
+      }
+    }
+  }
+
+  .title.page {
+    border-bottom: 1px solid $border-medium;
+    width: calc(100% - 12px);
+  }
 }
 
-@media (width <= 768px) {
-    .login {
-        width: 50%;
+.buttonWrapper {
+  width: 100%;
+  height: 48px;
+  gap: 8px;
+
+  a {
+    color: $primary;
+    font-size: 1.4rem;
+    text-decoration: unset;
+    font-weight: bold;
+
+    &:hover {
+      color: $secondary;
     }
+  }
 }
 
-@media (width <= 420px) {
-    .login {
-        width: 70%;
-        button {
-            right: 18px;
-        }
-    }
+.button {
+  width: max-content;
+  height: 32px;
+  border-radius: 50px;
+  padding: 4px 24px;
+  background: $primary;
+  font-size: 1.4rem;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    background: $secondary;
+  }
+}
+
+@include pad {
+  .login {
+    width: 100%;
+  }
 }
