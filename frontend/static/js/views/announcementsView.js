@@ -1,13 +1,13 @@
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
-  constructor() {
-    super();
-    this.setTitle("首頁");
-  }
+    constructor() {
+        super();
+        this.setTitle("首頁");
+    }
 
-  async getHtml() {
-    return `
+    async getHtml() {
+        return `
 				<div>
 					<div class="searchWrapper">
 						<div class="saerchButtons">
@@ -20,7 +20,7 @@ export default class extends AbstractView {
 											fill="#E51D88" />
 										<path d="M8.5 4.5H7.5V6.5H5.5V7.5H7.5V9.5H8.5V7.5H10.5V6.5H8.5V4.5Z" fill="#E51D88" />
 									</svg>
-									<span>新增公告</span>
+									<span addAnnounce>新增公告</span>
 								</div>
 
 								<!-- 分隔線 -->
@@ -197,5 +197,5 @@ export default class extends AbstractView {
 					</div>
 				</div>
 				`;
-  }
+    }
 }

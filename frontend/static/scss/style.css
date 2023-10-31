@@ -396,6 +396,10 @@ body {
   cursor: pointer;
   color: #e51d88;
 }
+.navigation a:focus {
+  color: #e51d88;
+  font-weight: bold;
+}
 .navigation a.active {
   color: #e51d88;
   font-weight: bold;

@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smile Taipei</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link href="./static/scss/style.css" rel="stylesheet" />
+    </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Smile Taipei</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-	<link href="./static/scss/style.css" rel="stylesheet" />
-</head>
+    <body>
+        <!-- 外框 100%  -->
+        <div class="wrapper">
+            <!-- width 100%  -->
+            <div class="brandHeader">
+                <div>
+                    <a href="../index.html"><img src="./static/icon/logo.svg" /></a>
+                </div>
+                <div class="flexRow gap8">
+                    <div class="userImage"></div>
+                    <div class="userName hidden">Hello! User Name</div>
+                    <div class="menu">
+                        <div class="iconWrapper flexCenter">
+                            <img src="./static/icon/menu.svg" />
+                        </div>
 
-<body>
-	<!-- 外框 100%  -->
-	<div class="wrapper">
-		<!-- width 100%  -->
-		<div class="brandHeader">
-			<div>
-				<a href="../index.html"><img src="./static/icon/logo.svg" /></a>
-			</div>
-			<div class="flexRow gap8">
-				<div class="userImage"></div>
-				<div class="userName hidden">Hello! User Name</div>
-				<div class="menu">
-					<div class="iconWrapper flexCenter">
-						<img src="./static/icon/menu.svg" />
-					</div>
-
-					<!-- <div class="dropdownWrapper shadowOP16 show">
+                        <!-- <div class="dropdownWrapper shadowOP16 show">
 						<div class="dropdownItem flexRow">
 							<img src="./static/icon/add.svg" />
 							<span>新增公告</span>
@@ -42,51 +41,51 @@
 							<span>刪除</span>
 						</div>
 					</div> -->
-				</div>
-			</div>
-		</div>
+                    </div>
+                </div>
+            </div>
 
-		<!-- width 100%  -->
-		<div class="navigation hidden">
-			<a href="/home" class="active" data-link>微笑台北</a>
-			<a href="/announcements" data-link>住戶公告</a>
-			<a href="/communicate" data-link>住戶交流</a>
-			<a href="/repair" data-link>公共報修</a>
-			<a href="/group" data-link>組織架構</a>
-			<a href="/userPage" data-link>用戶中心</a>
-			<a href="/vote" data-link>投票表決</a>
-			<a href="/backStage" data-link>後台登入</a>
-		</div>
+            <!-- width 100%  -->
+            <div class="navigation hidden">
+                <a href="/home" id="home" data-link>微笑台北</a>
+                <a href="/announcements" id="announcements" data-link>住戶公告</a>
+                <a href="/communicate" id="communicate" data-link>住戶交流</a>
+                <a href="/repair" id="repair" data-link>公共報修</a>
+                <a href="/group" id="group" data-link>組織架構</a>
+                <a href="/userPage" id="userPage" data-link>用戶中心</a>
+                <a href="/vote" id="vote" data-link>投票表決</a>
+                <a href="/backStage" id="backStage" data-link>後台登入</a>
+            </div>
 
-		<!-- 內容區塊 1024 -->
-		<div class="contentScroll">
-			<div class="container">
-				<!-- width 100%  -->
-				<div class="bannerCarousel">
-					<div class="bannerImg"></div>
-					<div class="dotWrapper">
-						<div class="dot active"></div>
-						<div class="dot"></div>
-						<div class="dot"></div>
-						<div class="dot"></div>
-						<div class="dot"></div>
-					</div>
-				</div>
-				<div id="content"></div>
-			</div>
-		</div>
+            <!-- 內容區塊 1024 -->
+            <div class="contentScroll">
+                <div class="container">
+                    <!-- width 100%  -->
+                    <div class="bannerCarousel">
+                        <div class="bannerImg"></div>
+                        <div class="dotWrapper">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div id="content"></div>
+                </div>
+            </div>
 
-		<!-- width 100%  -->
-		<div class="footer flexCenter flexColumn gap16">
-			<img src="./static/icon/footerLogo.svg" />
-			<div class="footerTextWrapper flexRow">
-				<span>&nbsp;smileTaipei@smileTaipei.com</span>
-				<span>臺北市信義區基隆路1段155號13樓之5</span>
-			</div>
-		</div>
-	</div>
+            <!-- width 100%  -->
+            <div class="footer flexCenter flexColumn gap16">
+                <img src="./static/icon/footerLogo.svg" />
+                <div class="footerTextWrapper flexRow">
+                    <span>&nbsp;smileTaipei@smileTaipei.com</span>
+                    <span>臺北市信義區基隆路1段155號13樓之5</span>
+                </div>
+            </div>
+        </div>
 
-	<script type="module" src="/static/js/index.js"></script>
-</body>
-
+        <script type="module" src="/static/js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </body>
 </html>

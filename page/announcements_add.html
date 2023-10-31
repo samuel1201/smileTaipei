@@ -1,82 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smile Taipei</title>
-    <script src="index.js" defer></script>
-    <!-- 引入index.js -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-    />
-    <link href="../frontend//static/scss/style.css" rel="stylesheet" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smile Taipei</title>
+        <script src="index.js" defer></script>
+        <!-- 引入index.js -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link href="../frontend//static/scss/style.css" rel="stylesheet" />
+    </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="container">
-        <!------------ Content panel ------------>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <!------------ Content panel ------------>
 
-        <div class="content">
-          <!------------ 公告查詢  ------------>
+                <div class="content">
+                    <!------------ 公告查詢  ------------>
 
-          <div>
-            <div class="title page">公告新增</div>
+                    <div>
+                        <div class="title page">公告新增</div>
 
-            <div class="inputTitle">公告標題：</div>
+                        <div class="inputTitle">公告標題：</div>
 
-            <input
-              type="text"
-              placeholder="請輸入標題文字"
-              class="noIconBefore"
-            />
+                        <input type="text" placeholder="請輸入標題文字" class="noIconBefore" />
 
-            <div class="inputMessgaeWrapper">
-              <span
-                >image long long long long long long long long long.doc</span
-              >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z"
-                  fill="#111111"
-                />
-              </svg>
+                        <div class="inputMessgaeWrapper">
+                            <span>image long long long long long long long long long.doc</span>
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z"
+                                    fill="#111111"
+                                />
+                            </svg>
+                        </div>
+
+                        <div class="buttonWrapper flexCenter">
+                            <div class="button flexCenter">上傳圖片</div>
+                        </div>
+
+                        <div class="inputTitle">公告內容：</div>
+
+                        <textarea type="text" cols="40" placeholder="請輸入文字" class="noIconBefore"></textarea>
+
+                        <div class="buttonWrapper flexCenter">
+                            <div class="button flexCenter solid">取消</div>
+                            <div class="button flexCenter">送出</div>
+                        </div>
+
+                        <div class="space32"></div>
+                    </div>
+                </div>
+                <!------------ Content panel end ------------>
             </div>
-
-            <div class="buttonWrapper flexCenter">
-              <div class="button flexCenter">上傳圖片</div>
-            </div>
-
-            <div class="inputTitle">公告內容：</div>
-
-            <textarea
-              type="text"
-              cols="40"
-              placeholder="請輸入文字"
-              class="noIconBefore"
-            ></textarea>
-
-            <div class="buttonWrapper flexCenter">
-              <div class="button flexCenter solid">取消</div>
-              <div class="button flexCenter">送出</div>
-            </div>
-
-            <div class="space32"></div>
-          </div>
         </div>
-        <!------------ Content panel end ------------>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
