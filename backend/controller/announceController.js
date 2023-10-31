@@ -1,6 +1,7 @@
 const Announce = require("../model/AnnouncementModel");
 const { newAnnounce } = require("../dao/announceDao");
 
+//新增公告
 const createAnnounce = async (req, res, next) => {
     try {
         console.log(req.body);
